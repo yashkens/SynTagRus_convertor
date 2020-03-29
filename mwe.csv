@@ -1,0 +1,1134 @@
+а именно,ADV Degree=Pos,,,,
+%,а,А,CCONJ,_,parataxis
+%,именно,ИМЕННО,PART,_,fixed
+##,,,,,
+а не то,SCONJ,,,,
+%,а,А,CCONJ,_,cc
+%,не,НЕ,PART,Polarity=Neg,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+##,,,,,
+а также,CCONJ,,,,
+%,а,А,CCONJ,_,cc
+%,также,ТАКЖЕ,PART,_,fixed
+##,,,,,
+а то,SCONJ,,,,
+%,а,А,CCONJ,_,cc
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+##,,,,,
+а то и,CCONJ,,,,
+%,а,А,CCONJ,_,cc
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,и,И,PART,_,fixed
+##,,,,,
+без устали,ADV Degree=Pos,,,,
+%,без,БЕЗ,ADP,_,advmod
+%,устали,УСТАЛЬ,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,fixed
+##,,,,,
+без умолку,ADV Degree=Pos,,,,
+%,без,БЕЗ,ADP,_,advmod
+%,умолку,УМОЛК,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,fixed
+##,,,,,
+бок о бок,ADV Degree=Pos,,,,
+%,бок,БОК,NOUN,Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing,advmod
+%,о,О,ADP,_,fixed
+%,бок,БОК,NOUN,Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+более чем,ADV Degree=Pos,,,,
+%,более,БОЛЕЕ,ADV,Degree=Cmp,case
+%,чем,ЧЕМ,SCONJ,_,fixed
+##,,,,,
+больше чем,ADV Degree=Pos,,,,
+%,больше,БОЛЬШЕ,ADV,Degree=Cmp,case
+%,чем,ЧЕМ,SCONJ,_,fixed
+##,,,,,
+в виде,ADP,,,,
+%,в,В,ADP,_,case
+%,виде,ВИД,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+в виду,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,виду,ВИД,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+в значительной мере,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,значительной,ЗНАЧИТЕЛЬНЫЙ,ADJ,Case=Loc|Degree=Pos|Gender=Fem|Number=Sing,fixed
+%,мере,МЕРА,NOUN,Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+в качестве,ADP,,,,
+%,в,В,ADP,_,case
+%,качестве,КАЧЕСТВО,NOUN,Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing,fixed
+##,,,,,
+в конечном счете,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,конечном,КОНЕЧНЫЙ,ADJ,Case=Loc|Degree=Pos|Gender=Masc|Number=Sing,fixed
+%,счете,СЧЕТ,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+в конце концов,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,конце,КОНЕЦ,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+%,концов,КОНЕЦ,NOUN,Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur,fixed
+##,,,,,
+в настоящее время,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,настоящее,НАСТОЯЩИЙ,ADJ,Animacy=Inan|Case=Acc|Degree=Pos|Gender=Neut|Number=Sing,fixed
+%,время,ВРЕМЯ,NOUN,Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing,fixed
+##,,,,,
+в обнимку,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,обнимку,ОБНИМКА,NOUN,Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+в общей сложности,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,общей,ОБЩИЙ,ADJ,Case=Ins|Degree=Pos|Gender=Fem|Number=Sing,fixed
+%,сложности,СЛОЖНОСТЬ,NOUN,Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+в одиночку,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,одиночку,ОДИНОЧКА,NOUN,Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+в складчину,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,складчину,СКЛАДЧИНА,NOUN,Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+в особенности,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,особенности,ОСОБЕННОСТЬ,NOUN,Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+в отличие от,ADP,,,,
+%,в,В,ADP,_,case
+%,отличие,ОТЛИЧИЕ,NOUN,Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing,fixed
+%,от,ОТ,ADP,_,fixed
+##,,,,,
+в отношении,ADP,,,,
+%,в,В,ADP,_,case
+%,отношении,ОТНОШЕНИЕ,NOUN,Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing,fixed
+##,,,,,
+в первую очередь,ADV Degree=Pos,,,,
+%,в,В,ADP,_,discourse
+%,первую,ПЕРВЫЙ,ADJ,Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,fixed
+%,очередь,ОЧЕРЕДЬ,NOUN,Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+в противном случае,ADV Degree=Pos,,,,
+%,в,В,ADP,_,cc
+%,противном,ПРОТИВНЫЙ,ADJ,Case=Loc|Degree=Pos|Gender=Masc|Number=Sing,fixed
+%,случае,СЛУЧАЙ,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+в противном случае,CCONJ,,,,
+%,В,В,ADP,_,cc
+%,противном,ПРОТИВНЫЙ,ADJ,Case=Loc|Degree=Pos|Gender=Masc|Number=Sing,fixed
+%,случае,СЛУЧАЙ,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+в розницу,ADV Degree=Pos,,,,
+%,в,В,ADP,_,advmod
+%,розницу,РОЗНИЦА,NOUN,Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+в связи с,ADP,,,,
+%,в,В,ADP,_,case
+%,связи,СВЯЗЬ,NOUN,Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,fixed
+%,с,С,ADP,_,fixed
+##,,,,,
+в случае если,SCONJ,,,,
+%,в,В,ADP,_,mark
+%,случае,СЛУЧАЙ,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+%,если,ЕСЛИ,SCONJ,_,fixed
+##,,,,,
+в случае, если,CONJ,,,
+%,в,В,ADP,_,mark
+%,случае,СЛУЧАЙ,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+%,|,|,PUNCT,_,punct
+%,если,ЕСЛИ,SCONJ,_,fixed
+##,,,,,
+в соответствии с,ADP,,,,
+%,в,В,ADP,_,case
+%,соответствии,СООТВЕТСТВИЕ,NOUN,Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing,fixed
+%,с,С,ADP,_,fixed
+##,,,,,
+в состоянии,ADV Degree=Pos,,,,
+%,в,В,ADP,_,%
+%,состоянии,СОСТОЯНИЕ,NOUN,Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing,fixed
+##,,,,,
+в течение,ADP,,,,
+%,в,В,ADP,_,case
+%,течение,ТЕЧЕНИЕ,NOUN,Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing,fixed
+##,,,,,
+в то время как,SCONJ,,,,
+%,в,В,ADP,_,cc
+%,то,ТОТ,DET,Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing,fixed
+%,время,ВРЕМЯ,NOUN,Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing,fixed
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+в том числе,PART,,,,
+%,в,В,ADP,_,appos
+%,том,ТОТ,DET,Case=Loc|Gender=Neut|Number=Sing,fixed
+%,числе,ЧИСЛО,NOUN,Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing,fixed
+##,,,,,
+в угоду,ADP,,,,
+%,в,В,ADP,_,case
+%,угоду,УГОДА,NOUN,Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+в ходе,ADP,,,,
+%,в,В,ADP,_,case
+%,ходе,ХОД,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+в частности,ADV Degree=Pos,,,,
+%,в,В,ADP,_,discourse
+%,частности,ЧАСТНОСТЬ,NOUN,Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+во время,ADP,,,,
+%,во,ВО,ADP,_,case
+%,время,ВРЕМЯ,NOUN,Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing,fixed
+##,,,,,
+во главе,ADV Degree=Pos,,,,
+%,во,ВО,ADP,_,case
+%,главе,ГЛАВА,NOUN,Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+во избежание,ADP,,,,
+%,во,ВО,ADP,_,case
+%,избежание,ИЗБЕЖАНИЕ,NOUN,Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing,fixed
+##,,,,,
+во что бы то ни стало,ADV Degree=Pos,,,,
+%,во,ВО,ADP,_,advmod
+%,что,ЧТО,PRON,Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing,fixed
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,стало,СТАТЬ,VERB,Aspect=Perf|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+вплоть до,ADP,,,,
+%,вплоть,ВПЛОТЬ,ADV,Degree=Pos,case
+%,до,ДО,ADP,_,fixed
+##,,,,,
+вряд ли,ADV Degree=Pos,,,,
+%,вряд,ВРЯД,ADV,Degree=Pos,advmod
+%,ли,ЛИ,PART,_,fixed
+##,,,,,
+все же,PART,,,,
+%,все,ВСЕ,PART,_,advmod
+%,же,ЖЕ,PART,_,fixed
+##,,,,,
+всё же,PART,,,,
+%,всё,ВСЁ,PART,_,advmod
+%,же,ЖЕ,PART,_,fixed
+##,,,,,
+все равно,ADV Degree=Pos,,,,
+%,все,ВСЕ,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,advmod
+%,равно,РАВНЫЙ,ADJ,Degree=Pos|Gender=Neut|Number=Sing|Variant=Short,fixed
+##,,,,,
+все равно,PART,,,,
+%,все,ВСЕ,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,advmod
+%,равно,РАВНЫЙ,ADJ,Degree=Pos|Gender=Neut|Number=Sing|Variant=Short,fixed
+##,,,,,
+всё равно,ADV Degree=Pos,,,,
+%,всё,ВСЁ,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,advmod
+%,равно,РАВНЫЙ,ADJ,Degree=Pos|Gender=Neut|Number=Sing|Variant=Short,fixed
+##,,,,,
+до отказа,ADV Degree=Pos,,,,
+%,до,ДО,ADP,_,advmod
+%,отказа,ОТКАЗ,NOUN,Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing,fixed
+##,,,,,
+до поры до времени,ADV Degree=Pos,,,,
+%,до,ДО,ADP,_,advmod
+%,поры,ПОРА,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,fixed
+%,до,ДО,ADP,_,fixed
+%,времени,ВРЕМЯ,NOUN,Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing,fixed
+##,,,,,
+до сих пор,ADV Degree=Pos,,,,
+%,до,ДО,ADP,_,advmod
+%,сих,СЕЙ,DET,Case=Gen|Number=Plur,fixed
+%,пор,ПОРА,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur,fixed
+##,,,,,
+до того как,SCONJ,,,,
+%,до,ДО,ADP,_,mark
+%,того,ТО,PRON,Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing,fixed
+%,|,|,PUNCT,_,punct
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+едва ли,ADV Degree=Pos,,,,
+%,едва,ЕДВА,ADV,Degree=Pos,advmod
+%,ли,ЛИ,PART,_,fixed
+##,,,,,
+едва не,PART,,,,
+%,едва,ЕДВА,ADV,Degree=Pos,advmod
+%,не,НЕ,PART,Polarity=Neg,fixed
+##,,,,,
+ей богу,PART,,,,
+%,Ей,ЕЙ,INTJ,_,discourse
+%,богу,БОГ,NOUN,Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,fixed
+##,,,,,
+за исключением,ADP,,,,
+%,за,ЗА,ADP,_,case
+%,исключением,ИСКЛЮЧЕНИЕ,NOUN,Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing,fixed
+##,,,,,
+за рубежом,ADV Degree=Pos,,,,
+%,за,ЗА,ADP,_,advmod
+%,рубежом,РУБЕЖ,NOUN,Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing,fixed
+##,,,,,
+за счет,ADP,,,,
+%,за,ЗА,ADP,_,case
+%,счет,СЧЕТ,NOUN,Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+как будто,SCONJ,,,,
+%,как,КАК,SCONJ,_,mark
+%,будто,БУДТО,PART,_,fixed
+##,,,,,
+как будто,PART,,,,
+%,как,КАК,ADV,Degree=Pos,advmod
+%,будто,БУДТО,PART,_,fixed
+##,,,,,
+как бы,PART,,,,
+%,как,КАК,ADV,Degree=Pos,advmod
+%,бы,БЫ,PART,_,fixed
+##,,,,,
+как бы то ни было,ADV Degree=Pos,,,,
+%,как,КАК,SCONJ,_,parataxis
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,было,БЫТЬ,VERB,Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+как если бы,SCONJ,,,,
+%,как,КАК,SCONJ,_,mark
+%,если,ЕСЛИ,SCONJ,_,fixed
+%,бы,БЫ,PART,_,fixed
+##,,,,,
+как минимум,ADV Degree=Pos,,,,
+%,как,КАК,SCONJ,_,advmod
+%,минимум,МИНИМУМ,NOUN,Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+как раз,ADV Degree=Pos,,,,
+%,как,КАК,SCONJ,_,advmod
+%,раз,РАЗ,NOUN,Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+как только,SCONJ,,,,
+%,как,КАК,SCONJ,_,mark
+%,только,ТОЛЬКО,PART,_,fixed
+##,,,,,
+какой бы то ни было,ADJ Case=Gen|Degree=Pos|Number=Plur,,,,
+%,каких,КАКОЙ,DET,Case=Gen|Number=Plur,amod
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,было,БЫТЬ,VERB,Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+какой бы то ни было,ADJ Case=Nom|Degree=Pos|Number=Plur,,,,
+%,какие,КАКОЙ,DET,Case=Nom|Number=Plur,amod
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,было,БЫТЬ,VERB,Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+какой бы то ни было,ADJ Case=Gen|Degree=Pos|Gender=Neut|Number=Sing,,,,
+%,какого,КАКОЙ,DET,Case=Gen|Gender=Neut|Number=Sing,amod
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,было,БЫТЬ,VERB,Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+какой бы то ни было,ADJ Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing,,,,
+%,какой,КАКОЙ,DET,Case=Acc|Degree=Pos|Number=Plur,amod
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,было,БЫТЬ,VERB,Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+какой бы то ни было,ADJ Case=Acc|Degree=Pos|Gender=Fem|Number=Sing,,,,
+%,какую,КАКОЙ,DET,Case=Acc|Gender=Masc|Number=Sing,amod
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,было,БЫТЬ,VERB,Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+коль скоро,SCONJ,,,,
+%,коль,КОЛЬ,SCONJ,_,mark
+%,скоро,СКОРО,ADV,Degree=Pos,fixed
+##,,,,,
+кто бы то ни было,NOUN Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,,,,
+%,кому,КТО,PRON,Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,%
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,было,БЫТЬ,VERB,Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+кто бы то ни было,NOUN Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,,,,
+%,кем,КТО,PRON,Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,%
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,было,БЫТЬ,VERB,Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+кто бы то ни было,NOUN Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,кого,КТО,PRON,Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,%
+%,бы,БЫ,PART,_,fixed
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,было,БЫТЬ,VERB,Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+между прочим,ADV Degree=Pos,,,,
+%,между,МЕЖДУ,ADP,_,discourse
+%,прочим,ПРОЧЕЕ,PRON,Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing,fixed
+##,,,,,
+менее чем,ADV Degree=Pos,,,,
+%,менее,МЕНЕЕ,ADV,Degree=Cmp,case
+%,чем,ЧЕМ,SCONJ,_,fixed
+##,,,,,
+меньше чем,ADV Degree=Pos,,,,
+%,меньше,МЕНЬШЕ,ADV,Degree=Cmp,case
+%,чем,ЧЕМ,SCONJ,_,fixed
+##,,,,,
+навряд ли,ADV Degree=Pos,,,,
+%,навряд,ВРЯД,ADV,Degree=Pos,advmod
+%,ли,ЛИ,PART,_,fixed
+##,,,,,
+на плаву,ADV Degree=Pos,,,,
+%,на,НА,ADP,_,advmod
+%,плаву,ПЛАВ,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+на полпути,ADV Degree=Pos,,,,
+%,на,НА,ADP,_,advmod
+%,полпути,ПОЛПУТИ,NOUN,Animacy=Inan|Case=Loc|Number=Plur,fixed
+##,,,,,
+на кой черт,ADV Degree=Pos,,,,
+%,на,НА,ADP,_,advmod
+%,кой,ПОЛПУТИ,DET,Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing,fixed
+%,черт,ПОЛПУТИ,NOUN,Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+наравне с,ADP,,,,
+%,наравне,НАРАВНЕ,ADV,Degree=Pos,case
+%,с,С,ADP,_,fixed
+##,,,,,
+не прочь,ADV Degree=Pos,,,,
+%,не,НЕ,PART,Polarity=Neg,%
+%,прочь,ПРОЧЬ,ADV,Degree=Pos,fixed
+##,,,,,
+не то,CCONJ,,,,
+%,не,НЕ,PART,Polarity=Neg,cc
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+##,,,,,
+не то что,PART,,,,
+%,не,НЕ,PART,Polarity=Neg,advmod
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,что,ЧТО,SCONJ,_,fixed
+##,,,,,
+не то чтобы,PART,,,,
+%,не,НЕ,PART,Polarity=Neg,advmod
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+%,чтобы,ЧТОБЫ,SCONJ,_,fixed
+##,,,,,
+невзирая на,ADP,,,,
+%,невзирая,НЕВЗИРАЯ,ADV,Polarity=Neg,case
+%,на,НА,ADP,_,fixed
+##,,,,,
+несмотря на,ADP,,,,
+%,несмотря,НЕСМОТРЯ,ADV,Polarity=Neg,case
+%,на,НА,ADP,_,fixed
+##,,,,,
+нет-нет да и,PART,,,,
+%,нет,НЕТ,PART,Polarity=Neg,advmod
+%,-,-,PUNCT,_,punct
+%,нет,НЕТ,PART,Polarity=Neg,fixed
+%,да,ДА,CCONJ,_,fixed
+%,и,И,PART,_,fixed
+##,,,,,
+ни в коей мере,ADV Degree=Pos,,,,
+%,ни,НИ,PART,Polarity=Neg,advmod
+%,в,В,ADP,_,fixed
+%,коей,КОЙ,DET,Case=Loc|Gender=Fem|Number=Sing,fixed
+%,мере,МЕРА,NOUN,Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+ни в коем случае,ADV Degree=Pos,,,,
+%,ни,НИ,PART,Polarity=Neg,advmod
+%,в,В,ADP,_,fixed
+%,коем,КОЙ,DET,Case=Loc|Gender=Masc|Number=Sing,fixed
+%,случае,СЛУЧАЙ,NOUN,Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+ни много ни мало,ADV Degree=Pos,,,,
+%,ни,НИ,PART,Polarity=Neg,advmod
+%,много,МНОГО,ADV,Degree=Pos,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,мало,МАЛО,ADV,Degree=Pos,fixed
+##,,,,,
+ни разу,ADV Degree=Pos,,,,
+%,ни,НИ,PART,Polarity=Neg,advmod
+%,разу,РАЗ,NOUN,Animacy=Inan|Case=Par|Gender=Masc|Number=Sing,fixed
+##,,,,,
+ни шатко ни валко,ADV Degree=Pos,,,,
+%,ни,НИ,PART,Polarity=Neg,advmod
+%,шатко,ШАТКО,ADV,Degree=Pos,fixed
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,валко,ВАЛКО,ADV,Degree=Pos,fixed
+##,,,,,
+никоим образом,ADV Degree=Pos,,,,
+%,никоим,НИКОЙ,DET,Case=Ins|Gender=Masc|Number=Sing,advmod
+%,образом,ОБРАЗ,NOUN,Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing,fixed
+##,,,,,
+нон грата,ADV Degree=Pos,,,,
+%,нон,НОН,PART,_,amod
+%,грата,ГРАТА,ADJ,_,fixed
+##,,,,,
+ноу хау,NOUN,,,,
+%,ноу,НОУ,NOUN,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,%
+%,хау,ХАУ,NOUN,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,fixed
+##,,,,,
+ну и,PART,,,,
+%,ну,НУ,PART,_,discourse
+%,и,И,CCONJ,_,fixed
+##,,,,,
+оттого что,SCONJ,,,,
+%,оттого,ОТТОГО,ADV,Degree=Pos,mark
+%,что,ЧТО,SCONJ,_,fixed
+##,,,,,
+оттого, что,CONJ,,,
+%,оттого,ОТТОГО,ADV,Degree=Pos,mark
+%,|,|,PUNCT,_,punct
+%,что,ЧТО,SCONJ,_,fixed
+##,,,,,
+плоть от плоти,ADV Degree=Pos,,,,
+%,плоть,ПЛОТЬ,NOUN,Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,advmod
+%,от,ОТ,ADP,_,fixed
+%,плоти,ПЛОТЬ,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,fixed
+##,,,,,
+по крайней мере,ADV Degree=Pos,,,,
+%,по,ПО,ADP,_,advmod
+%,крайней,КРАЙНИЙ,ADJ,Case=Dat|Degree=Pos|Gender=Fem|Number=Sing,fixed
+%,мере,МЕРА,NOUN,Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing,fixed
+##,,,,,
+по меньшей мере,ADV Degree=Pos,,,,
+%,по,ПО,ADP,_,advmod
+%,меньшей,МЕНЬШИЙ,ADJ,Case=Dat|Degree=Pos|Gender=Fem|Number=Sing,fixed
+%,мере,МЕРА,NOUN,Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing,fixed
+##,,,,,
+по мере,ADP,,,,
+%,по,ПО,ADP,_,case
+%,мере,МЕРА,NOUN,Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing,fixed
+##,,,,,
+по мере того как,SCONJ,,,,
+%,по,ПО,ADP,_,mark
+%,мере,МЕРА,NOUN,Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing,fixed
+%,того,ТО,PRON,Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing,fixed
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+по мере того, как,CONJ,,,
+%,по,ПО,ADP,_,mark
+%,мере,МЕРА,NOUN,Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing,fixed
+%,того,ТО,PRON,Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing,fixed
+%,|,|,PUNCT,_,punct
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+по отношению к,ADP,,,,
+%,по,ПО,ADP,_,case
+%,отношению,ОТНОШЕНИЕ,NOUN,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,fixed
+%,к,К,ADP,_,fixed
+##,,,,,
+по поводу,ADP,,,,
+%,по,ПО,ADP,_,case
+%,поводу,ПОВОД,NOUN,Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing,fixed
+##,,,,,
+по сравнению с,ADP,,,,
+%,по,ПО,ADP,_,case
+%,сравнению,СРАВНЕНИЕ,NOUN,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,fixed
+%,с,С,ADP,_,fixed
+##,,,,,
+по сравнению со,ADP,,,,
+%,по,ПО,ADP,_,case
+%,сравнению,СРАВНЕНИЕ,NOUN,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,fixed
+%,со,СО,ADP,_,fixed
+##,,,,,
+по старинке,ADV Degree=Pos,,,,
+%,по,ПО,ADP,_,advmod
+%,старинке,СТАРИНКА,NOUN,Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing,fixed
+##,,,,,
+по фиг,ADV Degree=Pos,,,,
+%,по,ПО,ADP,_,%
+%,фиг,ФИГ,NOUN,Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing,fixed
+##,,,,,
+потому как,SCONJ,,,,
+%,потому,ПОТОМУ,ADV,Degree=Pos,mark
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+потому что,SCONJ,,,,
+%,потому,ПОТОМУ,ADV,Degree=Pos,mark
+%,что,ЧТО,SCONJ,_,fixed
+##,,,,,
+прежде всего,ADV Degree=Pos,,,,
+%,прежде,ПРЕЖДЕ,ADP,_,advmod
+%,всего,ВСЕ,PRON,Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing,fixed
+##,,,,,
+прежде чем,SCONJ,,,,
+%,прежде,ПРЕЖДЕ,ADV,Degree=Pos,mark
+%,чем,ЧЕМ,SCONJ,_,fixed
+##,,,,,
+при помощи,ADV Degree=Pos,,,,
+%,при,ПРИ,ADP,_,case
+%,помощи,ПОМОЩЬ,NOUN,Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+при помощи,ADP,,,,
+%,при,ПРИ,ADP,_,case
+%,помощи,ПОМОЩЬ,NOUN,Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,fixed
+##,,,,,
+при условии, что,SCONJ,,,
+%,при,ПРИ,ADP,_,mark
+%,условии,УСЛОВИЕ,NOUN,Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing,fixed
+%,|,|,PUNCT,_,punct
+%,что,ЧТО,SCONJ,_,fixed
+##,,,,,
+при условии что,SCONJ,,,,
+%,при,ПРИ,ADP,_,mark
+%,условии,УСЛОВИЕ,NOUN,Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing,fixed
+%,что,ЧТО,SCONJ,_,fixed
+##,,,,,
+разве что,ADV Degree=Pos,,,,
+%,разве,РАЗВЕ,PART,_,advmod
+%,что,ЧТО,SCONJ,_,fixed
+##,,,,,
+разве что,SCONJ,,,,
+%,разве,РАЗВЕ,PART,_,mark
+%,что,ЧТО,SCONJ,_,fixed
+##,,,,,
+с лихвой,ADV Degree=Pos,,,,
+%,с,С,ADP,_,advmod
+%,лихвой,ЛИХВА,NOUN,Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing,fixed
+##,,,,,
+с панталыку,ADV Degree=Pos,,,,
+%,с,С,ADP,_,advmod
+%,панталыку,ПАНТАЛЫК,NOUN,Animacy=Inan|Case=Par|Gender=Masc|Number=Sing,fixed
+##,,,,,
+с поличным,ADV Degree=Pos,,,,
+%,с,С,ADP,_,advmod
+%,поличным,ПОЛИЧНОЕ,NOUN,Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing,fixed
+##,,,,,
+с помощью,ADP,,,,
+%,с,С,ADP,_,case
+%,помощью,ПОМОЩЬ,NOUN,Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing,fixed
+##,,,,,
+с тех пор,ADV Degree=Pos,,,,
+%,с,С,ADP,_,advmod
+%,тех,ТОТ,DET,Case=Gen|Number=Plur,fixed
+%,пор,ПОРА,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur,fixed
+##,,,,,
+с тех пор, как,SCONJ,,,
+%,с,С,ADP,_,mark
+%,тех,ТОТ,DET,Case=Gen|Number=Plur,fixed
+%,пор,ПОРА,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur,fixed
+%,|,|,PUNCT,_,punct
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+с тех пор как,SCONJ,,,,
+%,с,С,ADP,_,mark
+%,тех,ТОТ,DET,Case=Gen|Number=Plur,fixed
+%,пор,ПОРА,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur,fixed
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+святая святых,NOUN Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,,,,
+%,святая,СВЯТОЙ,ADJ,Animacy=Inan|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing,%
+%,святых,СВЯТОЙ,ADJ,Case=Gen|Degree=Pos|Number=Plur,nmod
+##,,,,,
+святая святых,NOUN Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,,,,
+%,святая,СВЯТОЙ,ADJ,Animacy=Inan|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing,%
+%,святых,СВЯТОЙ,ADJ,Case=Gen|Degree=Pos|Number=Plur,nmod
+##,,,,,
+со стороны,ADV Degree=Pos,,,,
+%,со,СО,ADP,_,case
+%,стороны,СТОРОНА,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,fixed
+##,,,,,
+т тчк е,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,mark
+%,е.,БЫТЬ,VERB,Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+т. д,ADV Degree=Pos,,,,
+%,т.,ТАК,ADV,Degree=Pos,conj
+%,д.,ДАЛЕЕ,ADV,Degree=Pos,fixed
+##,,,,,
+т. д.,ADV Degree=Pos,,,,
+%,т.,ТАК,ADV,Degree=Pos,conj
+%,д.,ДАЛЕЕ,ADV,Degree=Pos,fixed
+##,,,,,
+т.д.,ADV Degree=Pos,,,,
+%,т.,ТАК,ADV,Degree=Pos,conj
+%,д.,ДАЛЕЕ,ADV,Degree=Pos,fixed
+##,,,,,
+т.д,ADV Degree=Pos,,,,
+%,т.,ТАК,ADV,Degree=Pos,conj
+%,д.,ДАЛЕЕ,ADV,Degree=Pos,fixed
+##,,,,,
+т. к.,SCONJ,,,,
+%,так,ТАК,ADV,Degree=Pos,mark
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+т.к.,SCONJ,,,,
+%,так,ТАК,ADV,Degree=Pos,mark
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+т. е,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,mark
+%,е.,БЫТЬ,VERB,Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+т.е,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,mark
+%,е.,БЫТЬ,VERB,Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+т.е.,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,mark
+%,е.,БЫТЬ,VERB,Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+т. е.,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,mark
+%,е.,БЫТЬ,VERB,Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+т тчк п,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,conj
+%,п.,ПОДОБНЫЙ,ADJ,Case=Nom|Degree=Pos|Gender=Neut|Number=Sing,fixed
+##,,,,,
+т. п.,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,conj
+%,п.,ПОДОБНЫЙ,ADJ,Case=Nom|Degree=Pos|Gender=Neut|Number=Sing,fixed
+##,,,,,
+т. п,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,conj
+%,п.,ПОДОБНЫЙ,ADJ,Case=Nom|Degree=Pos|Gender=Neut|Number=Sing,fixed
+##,,,,,
+т.п,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,conj
+%,п.,ПОДОБНЫЙ,ADJ,Case=Nom|Degree=Pos|Gender=Neut|Number=Sing,fixed
+##,,,,,
+т.п.,ADV Degree=Pos,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,conj
+%,п.,ПОДОБНЫЙ,ADJ,Case=Nom|Degree=Pos|Gender=Neut|Number=Sing,fixed
+##,,,,,
+т.п.,NOUN Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing,,,,
+%,т.,ТО,PRON,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,conj
+%,п.,ПОДОБНЫЙ,ADJ,Case=Nom|Degree=Pos|Gender=Neut|Number=Sing,fixed
+##,,,,,
+o.s,X Foreign=Yes,,,,
+%,O.,O.,PROPN,Foreign=Yes,%
+%,S.,S.,PROPN,Foreign=Yes,flat
+##,,,,,
+p.s,NOUN ,,,,
+%,P.,P.,X,Foreign=Yes,%
+%,S.,S.,X,Foreign=Yes,fixed
+##,,,,,
+у.е.,NOUN Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,,,,
+%,у.,У.,ADJ,_,amod
+%,е.,Е.,NOUN,Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,%
+##,,,,,
+ph.d,PROPN ,,,,
+%,Ph.,PH.,NOUN,Foreign=Yes,compound
+%,D.,D.,NOUN,Foreign=Yes,%
+##,,,,,
+р.х.,PROPN Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing,,,,
+%,Р.,Р.,NOUN,Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing,%
+%,Х.,Х.,ADJ,_,amod
+##,,,,,
+л.с.,NOUN Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur,,,,
+%,л.,Л,ADJ,_,amod
+%,с.,С,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur,%
+##,,,,,
+и.о.,NOUN Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,и.,И,VERB,_,%
+%,о.,О,NOUN,Animacy=Inan|Case=Acc|Gender=Fem|Number=Plur,obj
+##,,,,,
+с тчк ш,NOUN Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,,,,
+%,с.,с.,ADJ,_,amod
+%,ш.,ш.,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,%
+##,,,,,
+с тчк ш,ADV Degree=Pos,,,,
+%,с.,с.,ADJ,_,amod
+%,ш.,ш.,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,%
+##,,,,,
+з тчк д,NOUN Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,,,,
+%,з.,з.,ADJ,_,amod
+%,д.,д.,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,%
+##,,,,,
+з тчк д,ADV Degree=Pos,,,,
+%,з.,з.,ADJ,_,amod
+%,д.,д.,NOUN,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,%
+##,,,,,
+н тчк э,NOUN Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,,,,
+%,н.,НАША,DET,Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,conj
+%,э.,ЭРА,NOUN,Case=Gen|Degree=Pos|Gender=Fem|Number=Sing,fixed
+##,,,,,
+так же как,CCONJ,,,,
+%,так,ТАК,ADV,Degree=Pos,cc
+%,же,ЖЕ,PART,_,fixed
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+так же, как,СCONJ,,,
+%,так,ТАК,ADV,Degree=Pos,cc
+%,же,ЖЕ,PART,_,fixed
+%,|,|,PUNCT,_,punct
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+так и,CCONJ,,,,
+%,так,ТАК,ADV,Degree=Pos,cc
+%,и,И,PART,_,fixed
+##,,,,,
+так и,CCONJ,,,,
+%,так,ТАК,ADV,Degree=Pos,cc
+%,и,И,PART,_,fixed
+##,,,,,
+так как,SCONJ,,,,
+%,так,ТАК,ADV,Degree=Pos,mark
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+так что,SCONJ,,,,
+%,так,ТАК,ADV,Degree=Pos,mark
+%,что,ЧТО,SCONJ,_,fixed
+##,,,,,
+тем более,ADV Degree=Pos,,,,
+%,тем,ТО,PRON,Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing,%
+%,более,БОЛЕЕ,ADV,Degree=Cmp,fixed
+##,,,,,
+тем более,PART,,,,
+%,тем,ТО,PRON,Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing,%
+%,более,БОЛЕЕ,ADV,Degree=Cmp,fixed
+##,,,,,
+тем не менее,ADV Degree=Pos,,,,
+%,тем,ТО,PRON,Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing,discourse
+%,не,НЕ,PART,Polarity=Neg,fixed
+%,менее,МЕНЕЕ,ADV,Degree=Cmp,fixed
+##,,,,,
+то бишь,ADV Degree=Pos,,,,
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,cc
+%,бишь,БИШЬ,PART,_,fixed
+##,,,,,
+то есть,ADV Degree=Pos,,,,
+%,то,ТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,mark
+%,есть,БЫТЬ,VERB,Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+тогда как,SCONJ,,,,
+%,тогда,ТОГДА,ADV,Degree=Pos,mark
+%,как,КАК,SCONJ,_,fixed
+##,,,,,
+тому назад,ADP,,,,
+%,тому,ТО,PRON,Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,advmod
+%,назад,НАЗАД,ADV,Degree=Pos,fixed
+##,,,,,
+хотя бы,ADV Degree=Pos,,,,
+%,хотя,ХОТЯ,PART,_,advmod
+%,бы,БЫ,PART,_,fixed
+##,,,,,
+хотя бы,PART,,,,
+%,хотя,ХОТЯ,PART,_,advmod
+%,бы,БЫ,PART,_,fixed
+##,,,,,
+хоть бы,PART,,,,
+%,хоть,ХОТЯ,PART,_,advmod
+%,бы,БЫ,PART,_,fixed
+##,,,,,
+что ни на есть,PART,,,,
+%,что,ЧТО,PRON,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,advmod
+%,ни,НИ,PART,Polarity=Neg,fixed
+%,на,НА,ADP,_,fixed
+%,есть,БЫТЬ,VERB,Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act,fixed
+##,,,,,
+чуть ли не,ADV Degree=Pos,,,,
+%,чуть,ЧУТЬ,ADV,Degree=Pos,advmod
+%,ли,ЛИ,PART,_,fixed
+%,не,НЕ,PART,Polarity=Neg,fixed
+##,,,,,
+чуть ли не,PART,,,,
+%,чуть,ЧУТЬ,ADV,Degree=Pos,advmod
+%,ли,ЛИ,PART,_,fixed
+%,не,НЕ,PART,Polarity=Neg,fixed
+##,,,,,
+чуть не,PART,,,,
+%,чуть,ЧУТЬ,ADV,Degree=Pos,advmod
+%,не,НЕ,PART,Polarity=Neg,fixed
+##,,,,,
+afghan islamic press,PROPN Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,,,,
+%,Afghan,AFGHAN,ADJ,Foreign=Yes,%
+%,Islamic,ISLAMIC,ADJ,Foreign=Yes,flat
+%,Press,PRESS,PROPN,Animacy=Inan|Case=Nom|Foreign=Yes|Gender=Neut|Number=Sing,flat
+##,,,,,
+e = mc2,NOUN ,,,,
+%,E,E,NOUN,_,nsubj
+%,=,=,SYM,_,cop
+%,mc2,MC2,NOUN,_,%
+##,,,,,
+g = 0,NOUN ,,,,
+%,g,G,NOUN,_,nsubj
+%,=,=,SYM,_,cop
+%,0,0,NUM,_,%
+##,,,,,
+Lincoln continental,NOUN,,,,
+%,Lincoln,LINCOLN,PROPN,Animacy=Anim|Case=Nom|Foreign=Yes|Gender=Masc|Number=Sing,%
+%,Continental,CONTINENTAL,ADJ,Foreign=Yes,appos
+##,,,,,
+бен ладен,NOUN Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,бен,БЕН,PROPN,_,%
+%,Ладен,ЛАДЕН,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+бен ладен,NOUN Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,,,,
+%,бен,БЕН,PROPN,_,%
+%,Ладена,ЛАДЕН,PROPN,Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,flat
+##,,,,,
+бен ладен,NOUN Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,,,,
+%,бен,БЕН,PROPN,_,%
+%,Ладеном,ЛАДЕН,PROPN,Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,flat
+##,,,,,
+бен ладен,NOUN Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,бин,БИН,PROPN,_,%
+%,Ладена,ЛАДЕН,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,flat
+##,,,,,
+бен ладен,PROPN Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,бен,БИН,PROPN,_,%
+%,Ладена,ЛАДЕН,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,flat
+##,,,,,
+бен ладен,PROPN Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,бен,БИН,PROPN,_,%
+%,Ладена,ЛАДЕН,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,flat
+##,,,,,
+бен ладен,NOUN Animacy=Anim|Case=Loc|Gender=Masc|Number=Sing,,,,
+%,бин,БИН,PROPN,_,%
+%,Ладене,ЛАДЕН,PROPN,Animacy=Anim|Case=Loc|Gender=Masc|Number=Sing,flat
+##,,,,,
+бен ладен,NOUN Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,,,,
+%,бин,БИН,PROPN,_,%
+%,Ладену,ЛАДЕН,PROPN,Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,flat
+##,,,,,
+вашингтон пост,NOUN Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing,,,,
+%,Вашингтон,ВАШИНГТОН,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,пост,ПОСТ,NOUN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+гранд отель,NOUN Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Гранд,ГРАНД,ADJ,_,amod
+%,Отель,ОТЕЛЬ,NOUN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+##,,,,,
+гу вшэ,PROPN Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,,,,
+%,ГУ,ГУ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,ВШЭ,ВШЭ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+гу вшэ,PROPN Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing,,,,
+%,ГУ,ГУ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,ВШЭ,ВШЭ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+гу вшэ,PROPN Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,,,,
+%,ГУ,ГУ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,ВШЭ,ВШЭ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+сктб нм,PROPN Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,,,,
+%,СКТБ,НМ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,СКТБ,НМ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+сктб нм,NOUN Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,,,,
+%,СКТБ,НМ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,СКТБ,НМ,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+sap r/3,X Foreign=Yes,,,,
+%,sap,SAP,PROPN,Foreign=Yes,%
+%,r/3,R/3,PROPN,Foreign=Yes,flat
+##,,,,,
+да винчи,NOUN Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,да,ДА,ADP,_,%
+%,Винчи,ВИНЧИ,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+дель арте,ADV Degree=Pos,,,,
+%,дель,ДЕЛЬ,ADP,_,amod
+%,арте,АРТЕ,NOUN,_,flat
+##,,,,,
+дэн сяопин,PROPN Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur,,,,
+%,Дэн,ДЭН,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur,%
+%,Сяопинов,СЯОПИН,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur,flat
+##,,,,,
+зав. кафедрой,NOUN,,,,
+%,зав.,ЗАВ.,NOUN,_,%
+%,кафедрой,КАФЕДРА,NOUN,Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing,nmod
+##,,,,,
+ким чен ир,PROPN Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Ким,КИМ,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,%
+%,Чен,ЧЕН,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+%,Ир,ИР,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+ким чен ир,PROPN Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,,,,
+%,Ким,КИМ,PROPN,Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,%
+%,Чен,ЧЕН,PROPN,Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,flat
+%,Ира,ИР,PROPN,Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,flat
+##,,,,,
+ким чен ир,PROPN Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,,,,
+%,Ким,КИМ,PROPN,Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,%
+%,Чен,ЧЕН,PROPN,Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,flat
+%,Иру,ИР,PROPN,Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,flat
+##,,,,,
+лим дон вон,PROPN Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Лим,ЛИМ,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,%
+%,Дон,ДОН,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+%,Вон,ВОН,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+ким дэ чжун,PROPN Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,Ким,ЛИМ,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,%
+%,Дэ,ДОН,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,flat
+%,Чжуна,ВОН,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,flat
+##,,,,,
+кинг конг,PROPN Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Кинг,КИНГ,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,%
+%,Конг,КОНГ,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+коста бланка,PROPN Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,,,,
+%,Коста,КОСТА,PROPN,Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,%
+%,Бланка,БЛАНКА,ADJ,_,appos
+##,,,,,
+коста бланка,PROPN Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Коста,КОСТА,PROPN,Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,%
+%,Бланка,БЛАНКА,ADJ,_,appos
+##,,,,,
+леруа мерлен,NOUN Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,,,,
+%,Леруа,ЛЕРУА,PROPN,_,%
+%,Мерлен,МЕРЛЕН,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+лоя джирга,NOUN Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,,,,
+%,Лоя,ЛОЯ,PROPN,_,%
+%,джирги,ДЖИРГИ,PROPN,_,flat
+##,,,,,
+о-цуки-сама-но канэ,X Foreign=Yes,,,,
+%,О-ЦУКИ-САМА-НО,О-ЦУКИ-САМА-НО,PROPN,Foreign=Yes,%
+%,КАНЭ,КАНЭ,PROPN,Foreign=Yes,flat
+##,,,,,
+фина трофи,X Foreign=Yes,,,,
+%,Фина,ФИНА,PROPN,_,%
+%,Трофи,ТРОФИ,PROPN,_,flat
+##,,,,,
+манчестер юнайтед,NOUN Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,Манчестер,МАНЧЕСТЕР,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,Юнайтед,ЮНАЙТЕД,ADJ,_,flat
+##,,,,,
+мао цзедун,PROPN Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,,,,
+%,Мао,МАО,PROPN,Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,%
+%,Цзэдуна,ЦЗЭДУН,PROPN,Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,flat
+##,,,,,
+мао цзедун,PROPN Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,Мао,МАО,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,%
+%,Цзэдуна,ЦЗЭДУН,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,flat
+##,,,,,
+мао цзедун,PROPN Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,,,,
+%,Мао,МАО,PROPN,Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,%
+%,Цзэдуну,ЦЗЭДУН,PROPN,Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing,flat
+##,,,,,
+ми-8 мт,NOUN Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Ми-8,МИ-8,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,МТ,МТ,ADJ,_,appos
+##,,,,,
+нью-йорк таймс,PROPN Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,,,,
+%,Нью-Йорк,НЬЮ-ЙОРК,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,Таймс,ТАЙМС,PROPN,Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,flat
+##,,,,,
+нью-йорк таймс,PROPN Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,,,,
+%,Нью-Йорк,НЬЮ-ЙОРК,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,Таймс,ТАЙМС,PROPN,Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,flat
+##,,,,,
+нью-йорк таймс,NOUN Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,,,,
+%,Нью-Йорк,НЬЮ-ЙОРК,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,Таймс,ТАЙМС,PROPN,Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,flat
+##,,,,,
+нью-йорк таймс,NOUN Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,,,,
+%,Нью-Йорк,НЬЮ-ЙОРК,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,Таймс,ТАЙМС,PROPN,Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing,flat
+##,,,,,
+файненшл таймс,PROPN Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,Financial,ФАЙНЕНШЛ,PROPN,Animacy=Inan|Case=Nom|Foreign=Yes|Gender=Masc|Number=Sing,%
+%,Times,ТАЙМС,PROPN,Animacy=Inan|Case=Nom|Foreign=Yes|Gender=Fem|Number=Sing,flat
+##,,,,,
+пол пот,PROPN Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Пол,ПОЛ,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,%
+%,Пот,ПОТ,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+пол пот,PROPN Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,,,,
+%,Пол,ПОЛ,PROPN,Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,%
+%,Потом,ПОТ,PROPN,Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,flat
+##,,,,,
+рбк daily,NOUN Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing,,,,
+%,РБК,РБК,PROPN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,%
+%,daily,DAILY,ADJ,Foreign=Yes,appos
+##,,,,,
+рото клон,NOUN Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Рото,РОТО,PROPN,_,%
+%,клон,КЛОН,NOUN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+сан лоренцо,PROPN Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Сан,САН,PROPN,_,%
+%,Лоренцо,ЛОРЕНЦО,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+сарасота бей,PROPN Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing,,,,
+%,Сарасота,САРАСОТА,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,%
+%,Бей,БЕЙ,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+фри-пресс джорнэл,NOUN Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Фри-Пресс,ФРИ-ПРЕСС,ADJ,_,%
+%,Джорнэл,ДЖОРНЭЛ,NOUN,Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+чан кайши,PROPN Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,Чан,ЧАН,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,%
+%,Кайши,КАЙШИ,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,flat
+##,,,,,
+чан кайши,PROPN Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,,,,
+%,Чан,ЧАН,PROPN,Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,%
+%,Кайши,КАЙШИ,PROPN,Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,flat
+##,,,,,
+чан кайши,PROPN Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,,,,
+%,Чан,ЧАН,PROPN,Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,%
+%,Кайши,КАЙШИ,PROPN,Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,flat
+##,,,,,
+примо де ривера,NOUN Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,Примо,ПРИМО,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,%
+%,Де,ДЕ,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,flat
+%,Ривера,РИВЕРА,PROPN,Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,flat
+##,,,,,
+эль греко,PROPN Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing,,,,
+%,Эль,ЭЛЬ,PROPN,_,%
+%,Греко,ГРЕКО,PROPN,Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,flat
+##,,,,,
+хомо сапиенс,NOUN Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing,,,,
+%,Хомо,ХОМО,PROPN,_,%
+%,Сапиенс,САПИЕНС,PROPN,Animacy=Anim|Case=Nom|Foreign=Yes|Gender=Masc|Number=Sing,flat
+##,,,,,
+хомо сапиенс,PROPN Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,Homo,ХОМО,PROPN,_,%
+%,Sapiens,САПИЕНС,PROPN,Animacy=Anim|Case=Gen|Foreign=Yes|Gender=Masc|Number=Sing,flat
+##,,,,,
+хомо сапиенс,NOUN Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing,,,,
+%,Homo,ХОМО,PROPN,_,%
+%,Sapiens,САПИЕНС,PROPN,Animacy=Anim|Case=Gen|Foreign=Yes|Gender=Masc|Number=Sing,flat
+##,,,,,
+хомо сапиенс,NOUN Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing,,,,
+%,Homo,ХОМО,PROPN,_,%
+%,Sapiens,САПИЕНС,PROPN,Animacy=Anim|Case=Acc|Foreign=Yes|Gender=Masc|Number=Sing,flat
+##,,,,,
+lincoln continental,NOUN Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing,,,,
+%,Lincoln,LINCOLN,PROPN,Animacy=Inan|Case=Gen|Foreign=Yes|Gender=Fem|Number=Sing,%
+%,continental,CONTINENTAL,PROPN,Animacy=Inan|Case=Gen|Foreign=Yes|Gender=Fem|Number=Sing,flat
+##,,,,,
+mercedes benz,X Foreign=Yes,,,,
+%,Mercedes,MERCEDES,PROPN,Foreign=Yes,%
+%,Benz,BENZ,PROPN,Foreign=Yes,flat
+##,,,,,
+new york,X Foreign=Yes,,,,
+%,New,NEW,PROPN,Foreign=Yes,%
+%,York,YORK,PROPN,Foreign=Yes,flat
+##,,,,,
+renault symbol,X Foreign=Yes,,,,
+%,Renault,RENAULT,PROPN,Foreign=Yes,%
+%,Symbol,SYMBOL,PROPN,Foreign=Yes,flat
+##,,,,,
+jp morgan,X Foreign=Yes,,,,
+%,JP,JP,PROPN,Foreign=Yes,%
+%,Morgan,MORGAN,PROPN,Foreign=Yes,flat
+##,,,,,
+al majalla,X Foreign=Yes,,,,
+%,Al,AL,PROPN,Foreign=Yes,%
+%,Majalla,MAJALLA,PROPN,Foreign=Yes,flat
+##,,,,,
+le temps,X Foreign=Yes,,,,
+%,Le,LE,PROPN,Foreign=Yes,%
+%,Temps,TEMPTS,PROPN,Foreign=Yes,flat
+##,,,,,
+le figaro,X Foreign=Yes,,,,
+%,Le,LE,PROPN,Foreign=Yes,%
+%,Figaro,FIGARO,PROPN,Foreign=Yes,flat
+##,,,,,
+др тчк,NOUN Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,,,,
+%,др,др,NOUN,Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing,%
+##,,,,,
+км нкл ч,NOUN Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur,,,,
+%,км/ч,км/ч,NOUN,Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur,%
+##,,,,,
+м нкл с,NOUN Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur,,,,
+%,м/ч,м/ч,NOUN,Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur,%
+##,,,,,
