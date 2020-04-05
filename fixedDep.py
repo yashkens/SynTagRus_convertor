@@ -7,11 +7,10 @@ import re
 import sys
 import csv
 
-import lxml.etree as ET
-
-from util import get_fnames, get_info
+from util import import_xml_lib, get_fnames, get_info
 from prop_tocheck import uncertain
 from propn_lemmas_certain import certain
+ET = import_xml_lib()
 
 ifolder = 'Elided'
 ofolder = 'Fixed'

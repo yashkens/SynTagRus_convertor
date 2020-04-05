@@ -5,9 +5,8 @@
 import re
 import os
 
-import lxml.etree as ET
-
-from util import get_fnames, get_info, get_children
+from util import import_xml_lib, get_fnames, get_info, get_children
+ET = import_xml_lib()
 
 ifolder = 'Cleaned'
 ofolder = 'MoreFixes'

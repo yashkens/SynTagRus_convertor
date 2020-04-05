@@ -9,9 +9,8 @@
 
 import os
 
-import lxml.etree as ET
-
-from util import get_fnames
+from util import import_xml_lib, get_fnames
+ET = import_xml_lib(verbose=True)
 
 targets_for_deletion = {'Problema_vybora.tgt': 5, 'Vyzhivshii_kamikadze.tgt': 255, 'Ukroshchenie_stroptivogo_naukograda.tgt': 47, 'Korp_622.tgt': 13, 'Korp_624.tgt': 51, 'Pravilo_75.tgt': 48, 'V_perevode_s_nebesnogo.tgt': 41}
 

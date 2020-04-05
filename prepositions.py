@@ -6,9 +6,8 @@ import os
 import re
 from collections import Counter
 
-import lxml.etree as ET
-
-from util import get_fnames, get_info, get_children_attrib
+from util import import_xml_lib, get_fnames, get_info, get_children_attrib
+ET = import_xml_lib()
 
 garbage = ['PR', 'CONJ']
 safe = ['S', 'ADV', 'A', 'NUM', 'NID', 'PART', 'INTJ']

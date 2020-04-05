@@ -7,9 +7,8 @@ import os
 import sys
 from collections import Counter, namedtuple
 
-import lxml.etree as ET
-
-from util import get_fnames, get_info, get_children_attrib, get_children
+from util import import_xml_lib, get_fnames, get_info, get_children_attrib, get_children
+ET = import_xml_lib()
 
 PosDep = namedtuple('PosDep', ['replace_dict', 'default'])
 

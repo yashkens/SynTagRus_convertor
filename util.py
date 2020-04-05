@@ -4,6 +4,20 @@ import os
 import glob
 import shutil
 
+def import_xml_lib(verbose=False):
+    try:
+        import lxml.etree as ET
+        if verbose:
+            print('Successfully imported lxml library')
+    except ImportError:
+        import xml.etree.ElementTree as ET
+        if verbose:
+            print('Failed to import lxml library;')
+            print('falling back on xml.etree standard library')
+            print('It is still recommended that you install lxml')
+            print('as it works much faster than xml.etree')
+    return ET
+
 def flatten_structure(path, ofolder):
     """Transform original nested folder structure into flat structure"""
     if os.path.exists(ofolder):

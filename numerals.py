@@ -10,9 +10,8 @@
 
 import os
 
-import lxml.etree as ET
-
-from util import get_fnames, get_info, get_children_attrib
+from util import import_xml_lib, get_fnames, get_info, get_children_attrib
+ET = import_xml_lib()
 
 lemmas_adv = ['назад', 'со стороны', 'внутри', 'изнутри']
 # collocations for lemmas

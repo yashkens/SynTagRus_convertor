@@ -7,9 +7,8 @@ Fixes for punctuation inside tokens
 import os
 import re
 
-import lxml.etree as ET
-
-from util import get_fnames, get_children
+from util import import_xml_lib, get_fnames, get_children
+ET = import_xml_lib()
 
 ifolder = 'Propernouns'
 ofolder = 'Final'

@@ -6,9 +6,8 @@ import os
 import re
 import sys
 
-import lxml.etree as ET
-
-from util import get_fnames, get_children
+from util import import_xml_lib, get_fnames, get_children
+ET = import_xml_lib()
 
 ifolder = 'FixRegular'
 ofolder = 'Ellipsis'

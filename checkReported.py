@@ -7,9 +7,8 @@ import re
 import sys
 import csv
 
-import lxml.etree as ET
-
-from util import get_fnames, get_children
+from util import import_xml_lib, get_fnames, get_children
+ET = import_xml_lib()
 
 ifolder = 'Fixed'
 ofolder = 'Reported'

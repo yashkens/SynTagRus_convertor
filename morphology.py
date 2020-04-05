@@ -8,9 +8,8 @@ from collections import namedtuple
 from collections import defaultdict
 import json
 
-import lxml.etree as ET
-
-from util import get_fnames, get_children
+from util import import_xml_lib, get_fnames, get_children
+ET = import_xml_lib()
 
 whitespace_re = re.compile('\s+')
 opening_cite_re = re.compile('(:["-]|,-)')

@@ -4,9 +4,8 @@
 
 import os
 
-import lxml.etree as ET
-
-from util import get_fnames, get_children_attrib
+from util import import_xml_lib, get_fnames, get_children_attrib
+ET = import_xml_lib()
 
 CONJ_root_rel_list = ["соч-союзн", "подч-союзн", "сравн-союзн", "инф-союзн"]
 logfile = 'garbagecollector.txt'

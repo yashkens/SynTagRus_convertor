@@ -6,9 +6,8 @@ import re
 import os
 from collections import defaultdict
 
-import lxml.etree as ET
-
-from util import get_fnames, get_info
+from util import import_xml_lib, get_fnames, get_info
+ET = import_xml_lib()
 
 ifolder = 'Morphology'
 ofolder = 'Propernouns'
