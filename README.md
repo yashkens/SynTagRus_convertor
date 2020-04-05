@@ -6,6 +6,9 @@ To fetch the required libraries, run:
 
 ``$ pip3 install -r requirements.txt``
 
+This pipeline uses lxml library for better performance.
+If lxml is not available, the pipline uses xml.etree standard library. 
+
 To run the pipeline:
 
 ``$ ./convert_all.sh input_dir``
