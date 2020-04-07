@@ -14,9 +14,6 @@ ET = import_xml_lib()
 
 ifolder = 'Elided'
 ofolder = 'Fixed'
-if len(sys.argv) == 3:
-    ifolder = sys.argv[1]
-    ofolder = sys.argv[2]
 
 csv_filename = 'mwe.csv'
 fix_lemma = 'ImpToPerf.txt'

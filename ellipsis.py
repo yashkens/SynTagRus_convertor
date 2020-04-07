@@ -12,10 +12,6 @@ ET = import_xml_lib()
 ifolder = 'FixRegular'
 ofolder = 'Ellipsis'
 
-if len(sys.argv) > 1:
-    ifolder = sys.argv[1]
-    ofolder = sys.argv[2]
-
 priority = {'предик': 0, '1-компл': 1, '2-компл': 2, '3-компл': 3, '4-компл': 4, '1-несобст-компл': 5, 'неакт-компл':6, 'nummod': 7, 'nummod:gov': 8, 'обст': 9, 'суб-копр': 10,}
 
 promotion = {'nsubj': 1, 'nsubj:pass': 2, 'obj': 3, 'iobj': 4, 'obl': 5, 'advmod': 6, 'csubj': 7, 'csubj': 8, 'xcomp': 9, 'ccomp': 10, 'aux': 11}
