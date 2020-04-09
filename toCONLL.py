@@ -5,7 +5,8 @@
 import os
 import re
 
-import lxml.etree as ET
+from util import import_xml_lib
+ET = import_xml_lib()
 
 ifolder = 'PunctExtract'
 ofolder = 'syntagrus'
@@ -19,7 +20,13 @@ def munch(ifolder, ifiles, ofname):
     with open(ofname, 'w', encoding='utf-8') as ofile:
         num = 0
         for ifname in ifiles:
-            tree = ET.parse(os.path.join(ifolder, ifname))
+            ipath = os.path.join(ifolder, ifname)
+
+            # skip non-existing files from the list
+            if not os.path.exists(ipath):
+                continue
+
+            tree = ET.parse(ipath)
             root = tree.getroot()
 
             for sentence in root[-1].findall('S'):
