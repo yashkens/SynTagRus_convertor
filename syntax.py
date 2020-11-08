@@ -85,6 +85,9 @@ ogranic = {('S','ADV'):'obl',
         ('V','V'):'obl',
         ('ADV','V'):'obl',
         ('S','S'):'nmod',
+        ('S','NUM'):'nmod',
+        ('V','NUM'):'nummod',
+        ('A','NUM'):'advmod',
         ('NUM','S'):'nmod',
         ('NID','S'):'nmod',
         ('S','NID'):'nmod',
@@ -101,6 +104,7 @@ ogranic = {('S','ADV'):'obl',
         }
 
 agent = {('V','S'):'obl',
+        ('V','NUM'):'obl',
         ('V','NID'):'obl',
         ('V','PART'):'obl',
         ('V','A'):'obl',
@@ -108,11 +112,14 @@ agent = {('V','S'):'obl',
         ('S','A'):'obl',
         #('S','S'):'nmod:agent',
         ('S','S'):'nmod',
+        ('S','NUM'):'nmod', #nummod?
         ('A','S'):'obl'
         }
 
 sub_copr = {('V','S'):'obl',
         ('V','A'):'obl',
+        ('V','NUM'):'obl',
+        ('A','NUM'):'obl',
         ('V','V'):'advcl',
         ('V','ADV'):'advmod',
         ('S','A'):'obl',
@@ -133,15 +140,19 @@ compl_appos = {'V':'appos',
                'A':'obl',
               }
 utochn = {('S','S'):'nmod',
+        ('S', 'NUM'):'nmod',
+        ('NID','NUM'):'nmod',
         ('NUM','S'):'nmod',
         ('A','S'):'nmod',
         ('S','A'):'nmod',
         ('A','A'):'nmod',
         ('ADV','S'):'obl',
         ('ADV','A'):'obl',
+        ('ADV', 'NUM'): 'obl',
         ('S','ADV'):'advmod',
         ('ADV','ADV'):'advmod',
         ('NUM','ADV'):'advmod',
+        ('A','ADV'):'advmod',
         ('A','V'):'acl',
          }
 kratn = {'V':'xcomp',
@@ -167,13 +178,18 @@ kolich_ogran = {('S','S'):'nmod',
                }
 kolich_kopred = {('V','ADV'):'advmod',
                 ('V','S'):'obl',
+                ('V','NUM'):'obl',
                 ('ADV','ADV'):'advmod',
                 ('A','ADV'):'advcl',
                 ('A','S'):'advcl',
                 }
 dliteln = {('V','ADV'):'advmod',
+           ('A','ADV'):'advmod',
+           ('S', 'ADV'): 'advmod',
            ('V','S'):'obl',
+           ('V','NUM'):'obl',
            ('S','S'):'nmod',
+           ('S','NUM'):'obl',
            ('ADV','S'):'obl',
            ('A','S'):'obl',
            ('V','A'):'obl',
@@ -185,11 +201,13 @@ prisvyaz = {('S','S'):'nmod',
            ('V','ADV'):'advmod',
            ('V','PART'):'obl',
            ('V','NID'):'obl',
+           ('V','NUM'):'xcomp',
            ('S','ADV'):'advmod',
            ('S','A'):'obl',
            }
 kvaziagent = {('S','S'):'nmod',
               ('S','NID'):'nmod',
+              ('S','NUM'):'nmod',
               ('S','A'):'nmod',
               ('S','PART'):'nmod',
               ('NUM','S'):'nmod',
@@ -202,6 +220,8 @@ kvaziagent = {('S','S'):'nmod',
              }
 
 atrib = {('S','S'):'nmod',
+         ('S','NUM'):'nmod',
+         ('NUM','NUM'):'nmod',
          ('A','S'):'nmod',
          ('NID','S'):'nmod',
          ('S','NID'):'nmod',
@@ -215,18 +235,22 @@ atrib = {('S','S'):'nmod',
          ('NID','ADV'):'advmod',
          ('NUM','ADV'):'advmod',
          ('ADV','S'):'obl',
+         ('ADV','NUM'):'obl',
          ('ADV','A'):'obl',
          ('S','A'):'obl',
          ('A','A'):'obl',
          ('NUM','A'):'obl',
          ('V','S'):'obl',
+         ('A','NUM'):'obl',
          ('S','V'):'acl',
          ('A','V'):'acl',
+         ('V','V'):'nmod', # one case, NP ellipsis
         }
 
 raspred = {('S','S'):'nmod',
             ('NUM','S'):'nmod',
             ('V','S'):'obl',
+            ('V','NUM'):'obl',
             ('S','A'):'obl',
             ('ADV','S'):'obl',
             ('S','ADV'):'obl',
@@ -236,6 +260,7 @@ raspred = {('S','S'):'nmod',
 nesobst_compl_dict = {('S','S'):'nmod',
                         ('S','NID'):'nmod',
                         ('V','S'):'obl',
+                        ('V','NUM'):'obl',
                         ('V','A'):'obl',
                         ('A','S'):'obl',
                         ('ADV','S'):'obl',
@@ -306,6 +331,17 @@ def main(ifname_list, ofname_list):
         # first we crack the shell
         # капризные связи
         # new attribute for old relation 'OLD'
+        #for sent in root[-1].findall('S'):
+            #for word in sent.findall('W'):
+            #    if word.attrib.get('LEMMA', '') in ['это', 'Это'] and word.attrib.get('LINK', '') == 'предик':
+            #        print(word.attrib.get('ID', ''), word.attrib.get('LINK', ''), word.attrib.get('FEAT', ''), file=sys.stderr)
+            #        print(*[(token.attrib.get('ID', 'EMPTY'), token.text, token.attrib.get('DOM', 'EMPTY'), token.attrib.get('FEAT', 'EMPTY'), token.attrib.get('LINK', 'EMPTY'), token.tail) for token in sent], file=sys.stderr, sep='\n')
+            #        print('***', file=sys.stderr)
+        #continue
+
+        # first we crack the shell
+        # капризные связи
+        # new attribute for old relation 'OLD'
         for sent in root[-1].findall('S'):
             for word in sent.findall('W'):
                 if 'LINK' in word.attrib:
@@ -332,6 +368,7 @@ def main(ifname_list, ofname_list):
                             else:
                                 word.attrib['LINK'] = 'nsubj'
                 except AttributeError:
+                    print('AttributeError')
                     print(word.attrib, sent.attrib['ID'])
                     sys.exit(1)
 
@@ -954,8 +991,7 @@ def main(ifname_list, ofname_list):
                     elif pos == 'PART' and word.attrib.get('LEMMA', 'EMPTY') == 'бы':
                         word.attrib['LINK'] = 'aux'
                     elif pos == 'PART' and word.attrib.get('LEMMA', 'EMPTY') == 'было':
-                        word.attrib['LINK'] = 'aux'
-
+                        word.attrib['LINK'] = 'advmod'
                     else:
                         word.attrib['DOM'] = head_token.attrib['DOM']
                         head_token.attrib['DOM'] = word.attrib['ID']
@@ -1019,7 +1055,7 @@ def main(ifname_list, ofname_list):
                 if link == 'пролепт' and head_token.attrib['LEMMA'] == 'это':
                     word.attrib['LINK'] = head_token.attrib['LINK']
                     word.attrib['DOM'] = head_token.attrib['DOM']
-                    head_token.attrib['LINK'] = 'cop'
+                    head_token.attrib['LINK'] = 'expl'
                     head_token.attrib['FEAT'] = 'PRON'
 
         # n-компл These are exceptions because no '-союзн' was found in original annotation
@@ -1174,10 +1210,18 @@ def main(ifname_list, ofname_list):
 
                 if link == 'огранич':
                     if pos == 'PART':
-                        if word.attrib['LEMMA'] in for_discourse:
+                        if  head_token.attrib.get('LINK', '') == 'cc':
+                            word.attrib['LINK'] = 'fixed'
+                        elif word.attrib['LEMMA'] in for_discourse:
                             word.attrib['LINK'] = 'discourse'
                         elif word.attrib['LEMMA'] in for_advmod:
                             word.attrib['LINK'] = 'advmod'
+                            if head_token.attrib.get('LEMMA', '') == 'это' and head_token.attrib.get('LINK', '') == 'expl':
+                                word.attrib['DOM'] = head_token.attrib['DOM']
+                                #print(word.attrib.get('ID', ''), word.attrib.get('LINK', ''), word.attrib.get('FEAT', ''), file=sys.stderr)
+                                #print(*[(token.attrib.get('ID', 'EMPTY'), token.text, token.attrib.get('DOM', 'EMPTY'), token.attrib.get('FEAT', 'EMPTY'), token.attrib.get('LINK', 'EMPTY'), token.tail) for token in sent], file=sys.stderr, sep='\n')
+                                #print('***', file=sys.stderr)
+
                         elif word.attrib['LEMMA'] in for_aux:
                             if head_token.attrib['LEMMA'] in for_advmod:
                                 word.attrib['LINK'] = 'fixed'
@@ -1187,6 +1231,7 @@ def main(ifname_list, ofname_list):
                                     word.attrib['DOM'] = head_token.attrib['DOM']
 
                         elif word.attrib['LEMMA'] == 'это':
+
                             if head_pos == 'V':
                                 word.attrib['LINK'] = 'expl'
                             else:
@@ -1208,6 +1253,14 @@ def main(ifname_list, ofname_list):
                     if head_pos == 'CONJ':
                         word.attrib['DOM'] = head_token.attrib['DOM']
 
+                    if pos == 'NUM':
+                        # exception 
+                        if head_pos == 'V' and head_token.attrib.get('LINK', '') == 'conj':
+                            word.attrib['LINK'] = 'parataxis'
+                        # exception
+                        elif head_pos == 'A' and word.attrib['LEMMA'] == 'один':
+                            word.attrib['LINK'] = 'advmod'
+
                     word.attrib['LINK'] = ogranic[(head_pos, pos)]
 
                 if link == 'оп-опред':
@@ -1225,6 +1278,7 @@ def main(ifname_list, ofname_list):
 
                 if link == 'опред':
                     children = get_children_attrib(sent, word.attrib['ID'])
+
                     if len(children) != 0:
                         if word.attrib['FEAT'].split()[0] not in {'V'}:
                             if all(ch['FEAT'].split()[0] not in {'V'} for ch in children) and all(ch.get('LINK', 'EMPTY') not in is_clause for ch in children) and any(ch['LINK'] in {'parataxis', 'вводн'} for ch in children):
@@ -1232,13 +1286,21 @@ def main(ifname_list, ofname_list):
                             elif all(ch['FEAT'].split()[0] not in {'V'} for ch in children) and all(ch.get('LINK', 'EMPTY') not in is_clause for ch in children):
                                 if head_pos in {'S', 'A', 'NUM', 'NID', 'ADV', 'V', 'CONJ'} and pos == 'A':
                                     word.attrib['LINK'] = 'amod'
-                                elif head_pos in {'S'} and pos == 'S':
+                                elif head_pos in {'S'} and pos in ['S', 'NUM']:
                                     word.attrib['LINK'] = 'nmod'
+
                             else:
                                 word.attrib['LINK'] = 'acl'
                         else:
                             word.attrib['LINK'] = 'acl'
                     else:
+                        if pos == 'NUM':
+                            if word.text in ['27,81', '4,5', '81,85', '12,5', '1,6', '10,2', '13,6']:
+                                word.attrib['LINK'] = 'nummod'
+                                continue
+                            else:
+                                word.attrib['FEAT'] = 'A'
+
                         word.attrib['LINK'] = 'amod'
 
                 if link == 'вводн': # вводное
@@ -1248,6 +1310,7 @@ def main(ifname_list, ofname_list):
                         word.attrib['LINK'] = vvodn['simple']
 
                 if link == 'уточн':
+
                     word.attrib['LINK'] = utochn[(head_pos, pos)]
 
                 if link == 'кратн':
@@ -1271,7 +1334,7 @@ def main(ifname_list, ofname_list):
                     elif head_pos == 'NID' and pos == 'NID':
                         word.attrib['LINK'] = 'nmod'
                     elif head_pos == 'NUM' and pos == 'A':
-                        word.attrib['LINK'] = 'nummod'
+                        word.attrib['LINK'] = 'nmod'
                     elif head_pos == 'NUM' and pos == 'S':
                         word.attrib['LINK'] = 'nmod'
                     elif head_pos == 'S' and pos == 'A':
@@ -1280,6 +1343,12 @@ def main(ifname_list, ofname_list):
                         word.attrib['LINK'] = 'nmod'
                     elif head_pos == 'ADV' and pos == 'S':
                         word.attrib['LINK'] = 'nmod'
+                    elif head_pos == 'NUM' and pos == 'NUM':
+                        word.attrib['LINK'] = 'nmod'
+                    elif head_pos == 'S' and pos == 'NUM':
+                        word.attrib['LINK'] = 'nmod'
+                    elif head_pos == 'A' and pos == 'NUM':
+                        word.attrib['LINK'] = 'amod'
 
                 if link == 'колич-огран':
                     word.attrib['LINK'] = kolich_ogran[(head_pos, pos)]
@@ -1288,7 +1357,12 @@ def main(ifname_list, ofname_list):
                     word.attrib['LINK'] = kolich_kopred[(head_pos, pos)]
 
                 if link == 'длительн':
+                    #print(word.attrib.get('ID', ''), word.attrib.get('LINK', ''), word.attrib.get('FEAT', ''), file=sys.stderr)
+                    #print(*[(token.attrib.get('ID', 'EMPTY'), token.text, token.attrib.get('DOM', 'EMPTY'), token.attrib.get('FEAT', 'EMPTY'), token.attrib.get('LINK', 'EMPTY'), token.tail) for token in sent], file=sys.stderr, sep='\n')
+                    #print('***', file=sys.stderr)
                     word.attrib['LINK'] = dliteln[(head_pos, pos)]
+
+
 
                 if link == 'присвяз':
                     if head_pos == 'S' and pos == 'S' and head_token.attrib['LEMMA'] == 'это':
@@ -1343,6 +1417,11 @@ def main(ifname_list, ofname_list):
                             word.attrib['LINK'] = atrib[(head_pos, pos)]
                         else:
                             word.attrib['LINK'] = 'advcl'
+                    elif pos == 'NUM':
+                        #print(word.attrib.get('ID', ''), word.attrib.get('LINK', ''), word.attrib.get('FEAT', ''), file=sys.stderr)
+                        #print(*[(token.attrib.get('ID', 'EMPTY'), token.text, token.attrib.get('DOM', 'EMPTY'), token.attrib.get('FEAT', 'EMPTY'), token.attrib.get('LINK', 'EMPTY'), token.tail) for token in sent], file=sys.stderr, sep='\n')
+                        #print('***', file=sys.stderr)
+                        word.attrib['LINK'] = atrib[(head_pos, pos)]
                     else:
                         try:
                             word.attrib['LINK'] = atrib[(head_pos, pos)]
@@ -1476,12 +1555,29 @@ def main(ifname_list, ofname_list):
                                 word.attrib['LINK'] = 'obl'
                         else:
                             word.attrib['LINK'] = 'nmod'
-
+#----- check
+                    elif 'NUM' in pos:
+                        if link in ['1-компл', '3-компл', '4-компл'] and head_pos == 'V':
+                            word.attrib['LINK'] = 'obl'
+                        if link in ['1-компл', '2-компл', '3-компл'] and head_pos == 'S':
+                            word.attrib['LINK'] = 'nmod'
+                        if link == '2-компл' and head_pos == 'V':
+                            if 'ДАТ' in feats and all(child['FEAT'].split()[0] != 'PR' for child in children) \
+                               and head_token.attrib.get('LINK', 'EMPTY') not in {'nsubj', 'nsubj:pass'}:
+                                word.attrib['LINK'] = 'iobj'
+                            else:
+                                word.attrib['LINK'] = 'obl'
+                        if link in ['1-компл'] and head_pos == 'ADV':
+                            word.attrib['LINK'] = 'obl'
+                        if link in ['1-компл'] and head_pos == 'A':
+                            word.attrib['LINK'] = 'obl'
+                        
+#----- maybe merge
                 if link == 'обст':
                     children = get_children_attrib(sent, word.attrib['ID'])
                     if pos == 'ADV':
                         word.attrib['LINK'] = 'advmod'
-                    elif pos in {'INTJ', 'PR', 'NID', 'A'}:
+                    elif pos in {'INTJ', 'PR', 'NID', 'A', 'NUM'}:
                         word.attrib['LINK'] = 'obl'
                     elif pos == 'PART':
                         if word.attrib['LEMMA'] in ['нет', 'эдь']:
@@ -1511,7 +1607,7 @@ def main(ifname_list, ofname_list):
                             word.attrib['LINK'] = 'advcl'
 
                 if link == 'об-копр':
-                    if head_pos == 'V' and pos in {'A', 'S'}:
+                    if head_pos == 'V' and pos in {'A', 'S', 'NUM'}:
                         word.attrib['LINK'] = 'obl'
                     elif head_pos == 'V' and pos == 'V':
                         word.attrib['LINK'] = 'xcomp'
@@ -1541,18 +1637,18 @@ def main(ifname_list, ofname_list):
                                     skolko_token.attrib['DOM'] = candidate_token.attrib['ID']
                                     skolko_token.attrib['LINK'] = 'mark'
                                     break
-                        elif head_token.attrib['LEMMA'] == 'столько' and head_token.attrib['LINK'] == 'nummod:gov':
-                            word.attrib['DOM'] = '10'
-                            word.attrib['LINK'] = 'amod'
+                        #elif head_token.attrib['LEMMA'] == 'столько' and head_token.attrib['LINK'] == 'nummod:gov':
+                        #    word.attrib['DOM'] = '10'
+                        #    word.attrib['LINK'] = 'amod'
                         elif head_token.attrib['LEMMA'] == 'сверху' and word.attrib['LEMMA'] == 'донизу':
                             word.attrib['DOM'] = head_token.attrib['ID']
                             word.attrib['LINK'] = 'fixed'
-                        elif head_token.attrib['LEMMA'] == 'столько' and word.attrib['LEMMA'] == 'сколько':
-                            word.attrib['DOM'] = '20'
-                            word.attrib['LINK'] = 'mark'
-                            rost_token = sent.findall('W')[19]
-                            rost_token.attrib['DOM'] = '13'
-                            rost_token.attrib['LINK'] = 'conj'
+                        #elif head_token.attrib['LEMMA'] == 'столько' and word.attrib['LEMMA'] == 'сколько':
+                            #word.attrib['DOM'] = '20'
+                            #word.attrib['LINK'] = 'mark'
+                            #rost_token = sent.findall('W')[19]
+                            #rost_token.attrib['DOM'] = '13'
+                            #rost_token.attrib['LINK'] = 'conj'
                     elif head_token.attrib['LEMMA'] == 'сколько' and word.attrib['LEMMA'] == 'только':
                         word.attrib['DOM'] = '12'
                         word.attrib['LINK'] = 'mark'

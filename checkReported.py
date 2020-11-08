@@ -10,7 +10,7 @@ import csv
 from util import import_xml_lib, get_fnames, get_children
 ET = import_xml_lib()
 
-ifolder = 'Fixed'
+ifolder = 'FixRegular'
 ofolder = 'Reported'
 
 fix_deprel = ['2005Stranitsy_voennoi_istorii.xml 169', '2009Stipendiat.xml 78', '2007Grechko.xml 217',
@@ -161,7 +161,7 @@ def munch(ifiles, ofiles):
                         check_citation(sentence, symbol, i, token.attrib['ID'], ifname, start=False)
 
             # let's see what we did
-            error_counter += int(check_sentence(sentence, ifname))
+            error_counter += int(check_sentence(sentence, ifname, sentence_key))
 
         tree.write(ofname, encoding="UTF-8")
 
@@ -179,7 +179,11 @@ def print_sentence(sentence):
                 token.attrib['DOM'].replace('_root', '0'),
                 token.attrib.get('LINK', 'root')))
 
-def check_sentence(sentence, file_name):
+def check_sentence(sentence, file_name, sentence_key):
+
+    if sentence_key in patches:
+        return False
+
     have_some = False
     # first, check if the sentence starts with some suspicious
     # punctuation, maybe it's a candidate for citation-first
