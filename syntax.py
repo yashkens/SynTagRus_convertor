@@ -734,6 +734,9 @@ def main(ifname_list, ofname_list):
                                     word.attrib['LINK'] = 'acl'
                             else:
                                 word.attrib['LINK'] = 'acl'
+                        else:
+                            print('Actually, something went wrong.\n Setting 1-компл to default acl')
+                            word.attrib['LINK'] = 'acl'
                     else:
                         print('Something went wrong 3')
                         print(word.attrib['ID'], word.text)
