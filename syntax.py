@@ -1024,7 +1024,7 @@ def main(ifname_list, ofname_list):
                     if word.attrib['DOM'] == '_root':
                         word.attrib.pop('LINK')
                     else:
-                        word.attrib['LINK'] = head_token.attrib['LINK']
+                        word.attrib['LINK'] = head_token.attrib.get('LINK', 'EMPTY')
                     head_token.attrib['LINK'] = 'aux:pass'
                     for elem in sent.findall('W'):
                         if elem.attrib['DOM'] == head_token.attrib['ID']:
