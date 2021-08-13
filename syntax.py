@@ -33,8 +33,9 @@ for_advmod = {'чуть-чуть', 'чуть ли не', 'чуть не', 'чт�
               'попало', 'попросту', 'просто', 'просто-напросто', 'просто-таки', 'ведь',
               'прямо', 'прямо-таки', 'все-таки', 'так', 'таки', 'было', 'себе', 'черт-те',
               'будто', 'вон', 'вот', 'эвон', 'тоже', 'лишь', 'и', 'именно', 'даже',
-              'пускай', 'пусть', 'пущай', 'наиболее', "откуда-то", "лично", "очень", "неизбежно", "так",
-              "как", "всего", "в первую очередь", "насколько", "полностью", "наиболее", 'не', "уже", "еще"}
+              'пускай', 'пусть', 'пущай', 'наиболее'}
+# "откуда-то", "лично", "очень", "неизбежно", "так",
+# "как", "всего", "в первую очередь", "насколько", "полностью", "наиболее", 'не', "уже", "еще"
 
 for_aux = {'бы'}
 
@@ -998,7 +999,7 @@ def main(ifname_list, ofname_list):
                         head_token.attrib['DOM'] = word.attrib['ID']
                         if word.attrib['DOM'] == '_root':
                             word.attrib.pop('LINK')
-                        if word.attrib['LEMMA'] == 'один':
+                        if word.attrib['LEMMA'].lower() == 'один':
                             head_token.attrib['LINK'] = 'cop'
                         else:
                             head_token.attrib['LINK'] = 'aux'
@@ -1243,6 +1244,8 @@ def main(ifname_list, ofname_list):
                             word.attrib['LINK'] = 'obl'
                         elif word.attrib['LEMMA'].lower() == 'кое':
                             word.attrib['LINK'] = 'dep'
+                        else:
+                            word.attrib['LINK'] = 'advmod'
                         continue
                     if pos == 'INTJ':
                         word.attrib['LINK'] = 'discourse'
@@ -1261,9 +1264,13 @@ def main(ifname_list, ofname_list):
                         # exception
                         elif head_pos == 'A' and word.attrib['LEMMA'].lower() == 'один':
                             word.attrib['LINK'] = 'advmod'
+                        else:
+                            word.attrib['LINK'] = 'advmod'
+                    # else:
+                    #     word.attrib['LINK'] = 'advmod'
 
-                    print('Not in any ifs!')
-                    print(word.attrib['LINK'], word.attrib['LEMMA'], word.attrib['ID'])
+                    # print('Not in any ifs!')
+                    # print(word.attrib['LINK'], word.attrib['LEMMA'], word.attrib['ID'])
                     word.attrib['LINK'] = ogranic[(head_pos, pos)]
 
                 if link == 'оп-опред':
