@@ -720,6 +720,10 @@ def main(ifname_list, ofname_list):
                                         if sent.findall('W')[int(word.attrib['DOM']) - 1].attrib['FEAT'].split(' ')[0] in {'V', 'A'}:
                                             if word.attrib['FEAT'].split()[0] in {'S', 'NID', 'A', 'NUM'}:
                                                 word.attrib['LINK'] = 'obl'
+                                            else:
+                                                word.attrib['LINK'] = 'obj'
+                                        else:
+                                            word.attrib['LINK'] = 'obj'
                                     else:
                                         word.attrib['LINK'] = 'advcl'
                                 else:
@@ -735,8 +739,8 @@ def main(ifname_list, ofname_list):
                             else:
                                 word.attrib['LINK'] = 'acl'
                         else:
-                            print('Actually, something went wrong.\n Setting 1-компл to default acl')
-                            word.attrib['LINK'] = 'acl'
+                            print('Actually, something went wrong.\n Setting 1-компл to default obj')
+                            word.attrib['LINK'] = 'obj'
                     else:
                         print('Something went wrong 3')
                         print(word.attrib['ID'], word.text)
