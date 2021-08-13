@@ -1243,6 +1243,8 @@ def main(ifname_list, ofname_list):
                             word.attrib['LINK'] = 'obl'
                         elif word.attrib['LEMMA'].lower() == 'кое':
                             word.attrib['LINK'] = 'dep'
+                        else:
+                            word.attrib['LINK'] = ogranic[(head_pos, pos)]
                         continue
                     if pos == 'INTJ':
                         word.attrib['LINK'] = 'discourse'
