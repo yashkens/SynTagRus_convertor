@@ -978,14 +978,14 @@ def main(ifname_list, ofname_list):
                         else:
                             word.attrib['LINK'] = head_token.attrib['LINK']
                         if 'СТРАД' in word.attrib.get('FEAT', 'EMPTY'):
-                            head_token.attrib['LINK'] = 'aux:pass'
+                            word.attrib['LINK'] = 'aux:pass'
 
                             if any(ch['LINK'] in {'nsubj', 'csubj'} for ch in get_children_attrib(sent, head_token.attrib['ID'])):
                                 subj_to_rename = [ch for ch in get_children_attrib(sent, head_token.attrib['ID']) if ch['LINK'] in {'nsubj', 'csubj'}]
                                 subj_to_rename[0]['LINK'] += ':pass'
 
                         else:
-                            head_token.attrib['LINK'] = 'aux'
+                            word.attrib['LINK'] = 'aux'
                         for elem in sent.findall('W'):
                             if elem.attrib['DOM'] == head_token.attrib['ID']:
                                 elem.attrib['DOM'] = word.attrib['ID']
@@ -1000,9 +1000,9 @@ def main(ifname_list, ofname_list):
                         if word.attrib['DOM'] == '_root':
                             word.attrib.pop('LINK')
                         if word.attrib['LEMMA'].lower() == 'один':
-                            head_token.attrib['LINK'] = 'cop'
+                            word.attrib['LINK'] = 'cop'
                         else:
-                            head_token.attrib['LINK'] = 'aux'
+                            word.attrib['LINK'] = 'aux'
 
         # пасс-анал
         for sent in root[-1].findall('S'):
@@ -1633,7 +1633,7 @@ def main(ifname_list, ofname_list):
                     elif head_pos == 'V' and pos == 'ADV':
                         word.attrib['LINK'] = 'obl'
                     elif head_pos == 'ADV' and pos == 'ADV':
-                        if head_token.attrib['LEMMA'] == 'сколько' and word.attrib['LEMMA'] == 'столько':
+                        if head_token.attrib['LEMMA'].lower() == 'сколько' and word.attrib['LEMMA'].lower() == 'столько':
                             # rename for convenience
                             stolko_token, skolko_token = word, head_token
                             # fix stolko
@@ -1650,7 +1650,7 @@ def main(ifname_list, ofname_list):
                         #elif head_token.attrib['LEMMA'] == 'столько' and head_token.attrib['LINK'] == 'nummod:gov':
                         #    word.attrib['DOM'] = '10'
                         #    word.attrib['LINK'] = 'amod'
-                        elif head_token.attrib['LEMMA'] == 'сверху' and word.attrib['LEMMA'] == 'донизу':
+                        elif head_token.attrib['LEMMA'].lower()  == 'сверху' and word.attrib['LEMMA'].lower()  == 'донизу':
                             word.attrib['DOM'] = head_token.attrib['ID']
                             word.attrib['LINK'] = 'fixed'
                         #elif head_token.attrib['LEMMA'] == 'столько' and word.attrib['LEMMA'] == 'сколько':
@@ -1659,7 +1659,7 @@ def main(ifname_list, ofname_list):
                             #rost_token = sent.findall('W')[19]
                             #rost_token.attrib['DOM'] = '13'
                             #rost_token.attrib['LINK'] = 'conj'
-                    elif head_token.attrib['LEMMA'] == 'сколько' and word.attrib['LEMMA'] == 'только':
+                    elif head_token.attrib['LEMMA'].lower()  == 'сколько' and word.attrib['LEMMA'].lower()  == 'только':
                         word.attrib['DOM'] = '12'
                         word.attrib['LINK'] = 'mark'
                         head_token.attrib['DOM'] = '14'
@@ -1667,7 +1667,7 @@ def main(ifname_list, ofname_list):
                         army_token = sent.findall('W')[13]
                         army_token.attrib['DOM'] = '12'
                         army_token.attrib['LINK'] = 'conj'
-                    elif word.attrib['LEMMA'] in {'тогда', 'так'}:
+                    elif word.attrib['LEMMA'].lower()  in {'тогда', 'так'}:
                         word.attrib['LINK'] = 'mark'
                         min_dom, min_cand = 1000, None
                         for candidate_token in sent.findall('W')[int(word.attrib['ID']):]:
@@ -1679,8 +1679,8 @@ def main(ifname_list, ofname_list):
                                 min_cand = candidate_token
                         else:
                             word.attrib['DOM'] = min_cand.attrib['ID']
-                    elif head_token.attrib['LEMMA'] == 'просыпаться' and word.attrib['LEMMA'] == 'происки' or\
-                         head_token.attrib['LEMMA'] == 'полезный' and word.attrib['LEMMA'] == 'терять':
+                    elif head_token.attrib['LEMMA'].lower()  == 'просыпаться' and word.attrib['LEMMA'].lower()  == 'происки' or\
+                         head_token.attrib['LEMMA'].lower()  == 'полезный' and word.attrib['LEMMA'].lower()  == 'терять':
                         word.attrib['LINK'] = 'nmod'
                     elif pos == 'V':
                         word.attrib['LINK'] = 'advcl'
