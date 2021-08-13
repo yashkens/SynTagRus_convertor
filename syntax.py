@@ -534,7 +534,8 @@ def main(ifname_list, ofname_list):
                                     elif word.attrib['LEMMA'] == 'выражаться':
                                         word.attrib['LINK'] = 'parataxis'
                                     else:
-                                        print('Something went wrong 2')
+                                        word.attrib['LINK'] = 'mark'
+                                        # print('Something went wrong 2')
                         head_token.attrib['LINK'] = 'mark'
                         for elem in children:
                             if elem['ID'] != word.attrib['ID'] and elem['LINK'] != 'вспом':
@@ -711,9 +712,9 @@ def main(ifname_list, ofname_list):
                         if sent.findall('W')[int(word.attrib['DOM']) - 1].attrib['FEAT'].split(' ')[0] in {'ADV'}:
                             word.attrib['LINK'] = 'advcl'
                         elif sent.findall('W')[int(word.attrib['DOM']) - 1].attrib['FEAT'].split(' ')[0] in {'V'}:
-                            if head_token.attrib['LEMMA'] == 'будто':
+                            if head_token.attrib['LEMMA'].lower() == 'будто':
                                 word.attrib['LINK'] = 'ccomp'
-                            elif head_token.attrib['LEMMA'] == 'как':
+                            elif head_token.attrib['LEMMA'].lower() == 'как':
                                 if word.attrib['FEAT'].split()[0] not in {'V'}:
                                     if all(ch['FEAT'].split()[0] not in {'V'} for ch in new_children) and all(ch.get('LINK', 'EMPTY') not in is_clause for ch in new_children):
                                         if sent.findall('W')[int(word.attrib['DOM']) - 1].attrib['FEAT'].split(' ')[0] in {'V', 'A'}:
