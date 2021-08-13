@@ -524,6 +524,8 @@ def main(ifname_list, ofname_list):
                                                 word.attrib['LINK'] = 'acl'
                                         else:
                                             word.attrib['LINK'] = 'acl'
+                                    else:
+                                        word.attrib['LINK'] = 'obj'
                                 elif head_token.attrib['LINK'] in {'4-компл'}:
                                     word.attrib['LINK'] = 'advcl'
                                 elif head_token.attrib['LINK'] in {'nsubj','nsubj:pass'}:
