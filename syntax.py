@@ -33,7 +33,8 @@ for_advmod = {'чуть-чуть', 'чуть ли не', 'чуть не', 'чт�
               'попало', 'попросту', 'просто', 'просто-напросто', 'просто-таки', 'ведь',
               'прямо', 'прямо-таки', 'все-таки', 'так', 'таки', 'было', 'себе', 'черт-те',
               'будто', 'вон', 'вот', 'эвон', 'тоже', 'лишь', 'и', 'именно', 'даже',
-              'пускай', 'пусть', 'пущай'}
+              'пускай', 'пусть', 'пущай', 'наиболее', "откуда-то", "лично", "очень", "неизбежно", "так",
+              "как", "всего", "в первую очередь", "насколько", "полностью", "наиболее"}
 
 for_aux = {'бы'}
 
@@ -1212,41 +1213,41 @@ def main(ifname_list, ofname_list):
                     if pos == 'PART':
                         if  head_token.attrib.get('LINK', '') == 'cc':
                             word.attrib['LINK'] = 'fixed'
-                        elif word.attrib['LEMMA'] in for_discourse:
+                        elif word.attrib['LEMMA'].lower() in for_discourse:
                             word.attrib['LINK'] = 'discourse'
-                        elif word.attrib['LEMMA'] in for_advmod:
+                        elif word.attrib['LEMMA'].lower() in for_advmod:
                             word.attrib['LINK'] = 'advmod'
-                            if head_token.attrib.get('LEMMA', '') == 'это' and head_token.attrib.get('LINK', '') == 'expl':
+                            if head_token.attrib.get('LEMMA', '').lower() == 'это' and head_token.attrib.get('LINK', '') == 'expl':
                                 word.attrib['DOM'] = head_token.attrib['DOM']
                                 #print(word.attrib.get('ID', ''), word.attrib.get('LINK', ''), word.attrib.get('FEAT', ''), file=sys.stderr)
                                 #print(*[(token.attrib.get('ID', 'EMPTY'), token.text, token.attrib.get('DOM', 'EMPTY'), token.attrib.get('FEAT', 'EMPTY'), token.attrib.get('LINK', 'EMPTY'), token.tail) for token in sent], file=sys.stderr, sep='\n')
                                 #print('***', file=sys.stderr)
 
-                        elif word.attrib['LEMMA'] in for_aux:
-                            if head_token.attrib['LEMMA'] in for_advmod:
+                        elif word.attrib['LEMMA'].lower() in for_aux:
+                            if head_token.attrib['LEMMA'].lower() in for_advmod:
                                 word.attrib['LINK'] = 'fixed'
                             else:
                                 word.attrib['LINK'] = 'aux'
                                 if head_token.attrib['DOM'] != '_root':
                                     word.attrib['DOM'] = head_token.attrib['DOM']
 
-                        elif word.attrib['LEMMA'] == 'это':
+                        elif word.attrib['LEMMA'].lower() == 'это':
 
                             if head_pos == 'V':
                                 word.attrib['LINK'] = 'expl'
                             else:
                                 word.attrib['LINK'] = 'discourse'
-                        elif word.attrib['LEMMA'] == 'словно':
+                        elif word.attrib['LEMMA'].lower() == 'словно':
                             word.attrib['LINK'] = 'mark'
-                        elif word.attrib['LEMMA'] in {'плюс', 'минус'}:
+                        elif word.attrib['LEMMA'].lower() in {'плюс', 'минус'}:
                             word.attrib['LINK'] = 'obl'
-                        elif word.attrib['LEMMA'] == 'кое':
+                        elif word.attrib['LEMMA'].lower() == 'кое':
                             word.attrib['LINK'] = 'dep'
                         continue
                     if pos == 'INTJ':
                         word.attrib['LINK'] = 'discourse'
                         continue
-                    if pos == 'CONJ' and word.attrib['LEMMA'] == 'и':
+                    if pos == 'CONJ' and word.attrib['LEMMA'].lower() == 'и':
                         word.attrib['LINK'] = 'discourse'
                         word.attrib['FEAT'] = 'PART'
                         continue
@@ -1258,9 +1259,11 @@ def main(ifname_list, ofname_list):
                         if head_pos == 'V' and head_token.attrib.get('LINK', '') == 'conj':
                             word.attrib['LINK'] = 'parataxis'
                         # exception
-                        elif head_pos == 'A' and word.attrib['LEMMA'] == 'один':
+                        elif head_pos == 'A' and word.attrib['LEMMA'].lower() == 'один':
                             word.attrib['LINK'] = 'advmod'
 
+                    print('Not in any ifs!')
+                    print(word.attrib['LINK'], word.attrib['LEMMA'], word.attrib['ID'])
                     word.attrib['LINK'] = ogranic[(head_pos, pos)]
 
                 if link == 'оп-опред':
