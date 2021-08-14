@@ -34,7 +34,7 @@ def parse_arguments():
 if __name__ == "__main__":
     args = parse_arguments()
 
-    # transform original folder structure into flat structure
+    # transform original folder structure into flat structure.
     flatten_structure(args.input_directory, 'Base')
 
     # fix some POS and erroneous sentences

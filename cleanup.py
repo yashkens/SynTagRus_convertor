@@ -43,7 +43,10 @@ def main(ifname_list, ofname_list):
 
                 # fix flat:foreign relation
                 if 'flat:foreign' in link:
-                    head_token = sent.findall('W')[int(word.attrib['DOM']) - 1]
+                    if word.attrib['DOM'] == '_root':
+                        head_token = sent.findall('W')[0]
+                    else:
+                        head_token = sent.findall('W')[int(word.attrib['DOM']) - 1]
                     chain = collect_chain(sent, head_token, 'flat:foreign')
                     flatten(sent, head_token, chain, 'flat:foreign')
 

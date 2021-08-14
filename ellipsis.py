@@ -51,7 +51,7 @@ def munch(ifiles, ofiles):
                 if elem.attrib['DOM'] == '_root':
                     elem.attrib['ENH'] = '0:root'
                 else:
-                    elem.attrib['ENH'] = elem.attrib['DOM'] + ':' + elem.attrib['LINK']
+                    elem.attrib['ENH'] = elem.attrib['DOM'] + ':' + elem.attrib.get('LINK', 'EMPTY')
 
             for token in sentence.findall('W'): # step 7: fix head ellipsys
                 if token.text == 'FANTOM' and token.attrib['DOM'] == '_root':
@@ -167,7 +167,7 @@ def munch(ifiles, ofiles):
                         else: # parataxis: 2 examples
                             for elem in children:
                                 if elem.attrib['LINK'] == 'parataxis':
-                                    guy_to_promote = 'parataxis'
+                                    guy_to_promote = elem
                                     elem.attrib['DOM'] = '_root'
                                     elem.attrib['ENH'] = '0:root'
                                     del elem.attrib['LINK']
@@ -179,8 +179,9 @@ def munch(ifiles, ofiles):
                                                 it.attrib['LINK'] = 'orphan'
 
                     # rehang fantom children onto guy_to_promote
-                    for fantom_child in fantom_children:
-                        fantom_child.attrib['DOM'] = guy_to_promote.attrib['ID']
+                    if guy_to_promote is not None:
+                        for fantom_child in fantom_children:
+                            fantom_child.attrib['DOM'] = guy_to_promote.attrib['ID']
                     break
 
             for token in sentence.findall('W'):
@@ -204,7 +205,7 @@ def munch(ifiles, ofiles):
 
                     # fix unexpected orphans in fantoms
                     for fantom in fantom_list:
-                        if fantom.attrib['LINK'] == 'orphan':
+                        if fantom.attrib.get('LINK', 'EMPTY') == 'orphan':
                             fantom.attrib['LINK'] = fantom.attrib['ENH'].split(':', maxsplit=1)[1]
 
                     for initial_fantom in fantom_list[::-1]:
@@ -289,7 +290,7 @@ def munch(ifiles, ofiles):
                                    
                                 if evolution_list is not None:
                                     children_list = evolution_list
-                                    children_list[0].attrib['LINK'] = initial_fantom.attrib['LINK']
+                                    children_list[0].attrib['LINK'] = initial_fantom.attrib.get('LINK', 'EMPTY')
                                     children_list[0].attrib['DOM'] = initial_fantom.attrib['DOM']
                                     for elem in children_list:
                                         if elem.attrib['ID'] != children_list[0].attrib['ID']:

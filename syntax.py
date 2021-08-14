@@ -46,7 +46,7 @@ compl = ['1-компл', '2-компл', '3-компл', '4-компл', '5-ко
 
 is_clause = {'nsubj', 'nsubj:pass', 'cop', 'aux', 'aux:pass'} #What about csubj?
 
-simple_rels = {#'аппрокс-порядк':'amod', # relation disappeared
+simple_rels = {'аппрокс-порядк':'amod', # relation disappeared
                'электив':'nmod',
                'релят':'acl:relcl',
                'дистанц':'obl',
@@ -103,6 +103,9 @@ ogranic = {('S','ADV'):'obl',
         ('S','CONJ'):'mark',
         ('ADV','CONJ'):'mark',
         ('CONJ','ADV'):'advmod',
+        ('A', 'V'): 'obl',
+        ('INTJ', 'CONJ'): 'mark',
+        ('CONJ', 'S'): 'nmod' # Which one is here?
         }
 
 agent = {('V','S'):'obl',
@@ -115,7 +118,10 @@ agent = {('V','S'):'obl',
         #('S','S'):'nmod:agent',
         ('S','S'):'nmod',
         ('S','NUM'):'nmod', #nummod?
-        ('A','S'):'obl'
+        ('A','S'):'obl',
+        ('A', 'A'): 'obl',  # Which one here?
+        ('S', 'V'): 'obl',  # Which one here?
+        ('A', 'V'): 'obl'
         }
 
 sub_copr = {('V','S'):'obl',
@@ -214,6 +220,7 @@ kvaziagent = {('S','S'):'nmod',
               ('S','PART'):'nmod',
               ('NUM','S'):'nmod',
               ('NID','A'):'nmod',
+              ('NID', 'S'): 'nmod',
               ('S','V'):'nmod',
               ('V','S'):'obl',
               ('A','S'):'obl',
@@ -411,6 +418,8 @@ def main(ifname_list, ofname_list):
                                                     word.attrib['LINK'] = 'amod'
                                                 elif word.attrib['FEAT'].split()[0] == 'ADV':
                                                     word.attrib['LINK'] = 'acl'
+                                                else:
+                                                    word.attrib['LINK'] = 'acl'
                                             else:                                            
                                                 word.attrib['LINK'] = 'acl'
                                         else:                                            
@@ -571,6 +580,10 @@ def main(ifname_list, ofname_list):
                                             word.attrib['LINK'] = 'nmod'
                                         elif word.attrib['FEAT'].split()[0] == 'A':
                                             word.attrib['LINK'] = 'amod'
+                                        else:
+                                            word.attrib['LINK'] = 'nmod'
+                                    else:
+                                        word.attrib['LINK'] = 'nmod'
                                 else:
                                     word.attrib['LINK'] = 'acl'
                             else:
@@ -586,6 +599,8 @@ def main(ifname_list, ofname_list):
                                     word.attrib['LINK'] = 'advcl'
                             else:
                                 word.attrib['LINK'] = 'advcl'
+                        else:
+                            word.attrib['LINK'] = 'advcl'  # Which one is here
                     elif word.attrib['LINK'] == "примыкат":
                         if sent.findall('W')[int(word.attrib['DOM']) - 1].attrib['FEAT'].split(' ')[0] in {'S'}:
                             if word.attrib['FEAT'].split()[0] not in {'V'}:
@@ -604,6 +619,8 @@ def main(ifname_list, ofname_list):
                                             word.attrib['LINK'] = 'obl'
                                         elif word.attrib['FEAT'].split()[0] == 'ADV':
                                             word.attrib['LINK'] = 'advmod'
+                                        else:
+                                            word.attrib['LINK'] = 'obl'
                                     else:
                                         word.attrib['LINK'] = 'advcl'
                                 else:
@@ -637,6 +654,8 @@ def main(ifname_list, ofname_list):
                                         word.attrib['LINK'] = 'obl'
                                     elif word.attrib['FEAT'].split()[0] == 'ADV':
                                         word.attrib['LINK'] = 'advmod'
+                                    else:
+                                        word.attrib['LINK'] = 'advmod' # Which is default here???
                                 else:
                                     word.attrib['LINK'] = 'nmod' # two sentences are here
                             else:
@@ -744,9 +763,10 @@ def main(ifname_list, ofname_list):
                             print('Actually, something went wrong.\n Setting 1-компл to default obj')
                             word.attrib['LINK'] = 'obj'
                     else:
-                        print('Something went wrong 3')
-                        print(word.attrib['ID'], word.text)
-                        print(*[(token.attrib.get('ID', 'EMPTY'), token.text, token.attrib.get('DOM', 'EMPTY'), token.attrib.get('FEAT', 'EMPTY'), token.attrib.get('LINK', 'EMPTY'), token.tail) for token in sent], sep='\n')
+                        head_token.attrib['LINK'] = 'mark'
+                        # print('Something went wrong 3')
+                        # print(word.attrib['ID'], word.text)
+                        # print(*[(token.attrib.get('ID', 'EMPTY'), token.text, token.attrib.get('DOM', 'EMPTY'), token.attrib.get('FEAT', 'EMPTY'), token.attrib.get('LINK', 'EMPTY'), token.tail) for token in sent], sep='\n')
                     head_token.attrib['LINK'] = 'mark'
                     for elem in children:
                         if elem['ID'] != word.attrib['ID'] and elem['LINK'] != 'вспом':
@@ -831,6 +851,8 @@ def main(ifname_list, ofname_list):
                             word.attrib['LINK'] = 'obl'
                         elif word.attrib['FEAT'].split()[0] in {'ADV'}:
                             word.attrib['LINK'] = 'advmod'
+                        else:
+                            word.attrib['LINK'] = 'advmod' # Which is default for сравн-союзн?
                     else:
                         print('Something went wrong 4')
                         print(word.attrib['ID'], word.text)
@@ -892,21 +914,27 @@ def main(ifname_list, ofname_list):
                                     word.attrib['LINK'] = 'amod'
                                 elif word.attrib['FEAT'].split()[0] in {'ADV'}:
                                     word.attrib['LINK'] = 'obl'
+                                else:
+                                    word.attrib['LINK'] = 'obl'
                             elif head_token.attrib['FEAT'].split()[0] in {'A', 'V', 'ADV'}:
                                 if word.attrib['FEAT'].split()[0] in {'ADV'}:
                                     word.attrib['LINK'] = 'advmod'
                                 else:
-                                    word.attrib['LINK'] = 'obl'
+                                    word.attrib['LINK'] = 'obl'  # Which one?
                         else:
                             if head_token.attrib['FEAT'].split()[0] in {'S', 'NUM', 'NID'}:
                                 word.attrib['LINK'] = 'acl'
                             elif head_token.attrib['FEAT'].split()[0] in {'V', 'A', 'ADV'}:
                                 word.attrib['LINK'] = 'advcl'
+                            else:
+                                word.attrib['LINK'] = 'advcl' # Which one?
                     else:
                         if head_token.attrib['FEAT'].split()[0] in {'S', 'NUM', 'NID'}:
                             word.attrib['LINK'] = 'acl'
                         elif head_token.attrib['FEAT'].split()[0] in {'V', 'A', 'ADV'}:
                             word.attrib['LINK'] = 'advcl'
+                        else:
+                            word.attrib['LINK'] = 'advcl'  # Which one?
 
         # сочин, соч-союзн, сент-соч
         for sent in root[-1].findall('S'):
@@ -916,19 +944,19 @@ def main(ifname_list, ofname_list):
                 for chain in chains:
                     if chain[0].attrib['FEAT'].split(' ')[0] == 'CONJ':
                         start, start_index = chain[1], 1
-                        if chain[0].attrib['LINK'] in {'вводн', 'примыкат', 'разъяснит'}:
+                        if chain[0].attrib.get('LINK', 'EMPTY') in {'вводн', 'примыкат', 'разъяснит'}:
                             start.attrib['LINK'] = 'parataxis'
                         # irregularity in the source markup
-                        elif chain[0].attrib['LINK'] in {'cc'} and chain[1].text == 'значит':
+                        elif chain[0].attrib.get('LINK', 'EMPTY') in {'cc'} and chain[1].text == 'значит':
                             start.attrib['LINK'] = 'parataxis'
                         # irregularity in the source markup
-                        elif chain[0].attrib['LINK'] in {'обст'} and chain[0].attrib['ID'] == '1':
+                        elif chain[0].attrib.get('LINK', 'EMPTY') in {'обст'} and chain[0].attrib['ID'] == '1':
                             start.attrib['LINK'] = 'advcl'
                         # irregularity in the source markup
-                        elif chain[0].attrib['LINK'] in {'nsubj'} and chain[0].attrib['ID'] == '1':
+                        elif chain[0].attrib.get('LINK', 'EMPTY') in {'nsubj'} and chain[0].attrib['ID'] == '1':
                             start.attrib['LINK'] = 'csubj'
                         else:
-                            start.attrib['LINK'] = chain[0].attrib['LINK']
+                            start.attrib['LINK'] = chain[0].attrib.get('LINK', 'EMPTY')
                         chain[0].attrib['DOM'], start.attrib['DOM'] = start.attrib['ID'], chain[0].attrib['DOM']
                         chain[0].attrib['LINK'] = 'cc' 
                     else:
@@ -1076,6 +1104,8 @@ def main(ifname_list, ofname_list):
                 link, pos, feats, head_token, head_pos, head_feats, head_root = get_info(word, sent)                
                 if link in compl and pos == 'CONJ':
                     children = get_children_attrib(sent, word.attrib['ID'])
+                    if not children:
+                        continue
                     if head_token.attrib['FEAT'].split()[0] == 'S':
                         word.attrib['LINK'] = 'nmod'
                         for ch in children:
@@ -1111,6 +1141,8 @@ def main(ifname_list, ofname_list):
                                     word.attrib['LINK'] = 'nmod'
                                 elif word.attrib['FEAT'].split()[0] in {'ADV'}:
                                     word.attrib['LINK'] = 'obl'
+                                else:
+                                    word.attrib['LINK'] = 'obl'
                             elif head_token.attrib['FEAT'].split()[0] in {'ADV', 'A'}:
                                 word.attrib['LINK'] = 'obl'
                             else: # one exception
@@ -1120,8 +1152,12 @@ def main(ifname_list, ofname_list):
                             if head_token.attrib['FEAT'].split()[0] in {'S'}:
                                 if word.attrib['FEAT'].split()[0] in {'S', 'A', 'ADV'}:
                                     word.attrib['LINK'] = 'acl'
+                                else:
+                                                                        word.attrib['LINK'] = 'acl'
                             elif head_token.attrib['FEAT'].split()[0] in {'A'}:
                                 if word.attrib['FEAT'].split()[0] in {'A', 'S'}:
+                                    word.attrib['LINK'] = 'acl'
+                                else:
                                     word.attrib['LINK'] = 'acl'
                             elif head_token.attrib['FEAT'].split()[0] in {'ADV'}:
                                 if word.attrib['LEMMA'] == 'человек':
@@ -1135,7 +1171,10 @@ def main(ifname_list, ofname_list):
                         elif head_pos in {'ADV'}:
                             word.attrib['LINK'] = 'advcl'
                         elif head_pos in {'A'}:
-                            if sent.findall('W')[int(head_token.attrib['DOM']) - 1].attrib['FEAT'].split()[0] == 'S':
+                            head_id = head_token.attrib['DOM']
+                            if head_token.attrib['DOM'] == '_root':
+                                head_id = 1
+                            if sent.findall('W')[int(head_id) - 1].attrib['FEAT'].split()[0] == 'S':
                                 word.attrib['DOM'] = sent.findall('W')[int(head_token.attrib['DOM']) - 1].attrib['ID']
                                 word.attrib['LINK'] = 'acl'
                             else:
@@ -1148,6 +1187,8 @@ def main(ifname_list, ofname_list):
                                     word.attrib['LINK'] = 'acl'
                                 else:
                                     word.attrib['LINK'] = 'acl'
+                        else:
+                            word.attrib['LINK'] = 'acl' # Which is default for эксплет
                     if pos == 'CONJ':
                         if head_token.attrib['LEMMA'] == 'потому':
                             word.attrib['LINK'] = 'mark'
@@ -1176,6 +1217,10 @@ def main(ifname_list, ofname_list):
                         children[0]['DOM'] = word.attrib['DOM']
                     else:
                         print('Something went wrong 1')
+                elif link == 'обст':
+                    word.attrib['LINK'] = 'mark'
+                # else:
+                #     word.attrib['LINK'] = 'mark'
 
         # вспом
         for sent in root[-1].findall('S'):
@@ -1369,6 +1414,8 @@ def main(ifname_list, ofname_list):
                         word.attrib['LINK'] = 'nmod'
                     elif head_pos == 'A' and pos == 'NUM':
                         word.attrib['LINK'] = 'amod'
+                    else:
+                        word.attrib['LINK'] = 'nmod'  # Which is default
 
                 if link == 'колич-огран':
                     word.attrib['LINK'] = kolich_ogran[(head_pos, pos)]
@@ -1523,6 +1570,8 @@ def main(ifname_list, ofname_list):
                                     word.attrib['LINK'] = 'obl'
                                 else:
                                     word.attrib['LINK'] = 'acl'
+                        else:
+                            word.attrib['LINK'] = 'obj'
                     elif pos == 'S':
                         if link == '2-компл' and 'РОД' in feats and all(child['FEAT'].split()[0] != 'PR' for child in children) \
                             and head_token.attrib.get('LINK', 'EMPTY') not in {'nsubj', 'nsubj:pass'}:
@@ -1579,7 +1628,7 @@ def main(ifname_list, ofname_list):
                     elif 'NUM' in pos:
                         if link in ['1-компл', '3-компл', '4-компл'] and head_pos == 'V':
                             word.attrib['LINK'] = 'obl'
-                        if link in ['1-компл', '2-компл', '3-компл'] and head_pos == 'S':
+                        if link in ['1-компл', '2-компл', '3-компл', '4-компл'] and head_pos == 'S':
                             word.attrib['LINK'] = 'nmod'
                         if link == '2-компл' and head_pos == 'V':
                             if 'ДАТ' in feats and all(child['FEAT'].split()[0] != 'PR' for child in children) \
@@ -1591,6 +1640,8 @@ def main(ifname_list, ofname_list):
                             word.attrib['LINK'] = 'obl'
                         if link in ['1-компл'] and head_pos == 'A':
                             word.attrib['LINK'] = 'obl'
+                    else:
+                        word.attrib['LINK'] = 'obj' # Which is default for all compl?
                         
 #----- maybe merge
                 if link == 'обст':
@@ -1661,6 +1712,9 @@ def main(ifname_list, ofname_list):
                         #    word.attrib['DOM'] = '10'
                         #    word.attrib['LINK'] = 'amod'
                         elif head_token.attrib['LEMMA'].lower()  == 'сверху' and word.attrib['LEMMA'].lower()  == 'донизу':
+                            word.attrib['DOM'] = head_token.attrib['ID']
+                            word.attrib['LINK'] = 'fixed'
+                        elif head_token.attrib['LEMMA'].lower() == 'снизу' and word.attrib['LEMMA'].lower() == 'доверху':
                             word.attrib['DOM'] = head_token.attrib['ID']
                             word.attrib['LINK'] = 'fixed'
                         #elif head_token.attrib['LEMMA'] == 'столько' and word.attrib['LEMMA'] == 'сколько':
