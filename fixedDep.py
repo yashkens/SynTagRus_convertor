@@ -32,9 +32,9 @@ def munch(ifiles, ofiles):
         root = tree.getroot()
         for k, sentence in enumerate(root[-1].findall('S')):
             for j, token in enumerate(sentence.findall('W')):
-                    if (token.attrib['LEMMA'], token.attrib['FEAT']) in dict_of_fixed and token.text != 'FANTOM': # поменять сам токен
+                    if (token.attrib['LEMMA'].lower(), token.attrib['FEAT']) in dict_of_fixed and token.text != 'FANTOM': # поменять сам токен
                         current_position = int(token.attrib['ID'])
-                        shift_num = len(dict_of_fixed[token.attrib['LEMMA'], token.attrib['FEAT']][0]) - 1
+                        shift_num = len(dict_of_fixed[token.attrib['LEMMA'].lower(), token.attrib['FEAT']][0]) - 1
                         shift_position = current_position - 1
                         for tok in sentence.findall('W'):
                             if '.' not in str(tok.attrib['ID']):
@@ -87,14 +87,14 @@ def munch(ifiles, ofiles):
 
                         starting_position = current_position
 
-                        for i, elem in enumerate(dict_of_fixed[token.attrib['LEMMA'], token.attrib['FEAT']][0]):
+                        for i, elem in enumerate(dict_of_fixed[token.attrib['LEMMA'].lower(), token.attrib['FEAT']][0]):
                             tag = ET.fromstring('<W></W>')
                             tag.attrib['ID'] = str(current_position)
                             tag.attrib['LEMMA'] = elem[1]
                             tag.attrib['OLD'] = 'EMPTY'
                             tag.attrib['FEAT'] = elem[2]
 
-                            head_position = dict_of_fixed[token.attrib['LEMMA'], token.attrib['FEAT']][1]
+                            head_position = dict_of_fixed[token.attrib['LEMMA'].lower(), token.attrib['FEAT']][1]
                             if i == head_position:
                                 # this is the head token of the group
                                 tag.attrib['DOM'] = str(temp_dom)
@@ -115,7 +115,7 @@ def munch(ifiles, ofiles):
                             else:
                                 tag.text = elem[0]
 
-                            if i == len(dict_of_fixed[token.attrib['LEMMA'], token.attrib['FEAT']][0]) - 1:
+                            if i == len(dict_of_fixed[token.attrib['LEMMA'].lower(), token.attrib['FEAT']][0]) - 1:
                                 tag.tail = temp_tail
                                 if no_dot:
                                     tag.text = tag.text.rstrip('.')
@@ -219,8 +219,8 @@ def munch(ifiles, ofiles):
 
         for sentence in root[-1].findall('S'):
             for token in sentence.findall('W'):
-                if token.attrib['LEMMA'] in dict_of_lemmas and 'Aspect=Perf' in token.attrib['FEAT']:
-                    token.attrib['LEMMA'] = dict_of_lemmas[token.attrib['LEMMA']]
+                if token.attrib['LEMMA'].lower() in dict_of_lemmas and 'Aspect=Perf' in token.attrib['FEAT']:
+                    token.attrib['LEMMA'] = dict_of_lemmas[token.attrib['LEMMA'].lower()]
 
         #this is test for debug purposes:
         #for sent in root[-1].findall('S'):

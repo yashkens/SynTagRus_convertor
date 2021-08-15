@@ -362,7 +362,7 @@ def main(ifname_list, ofname_list):
         for sent in root[-1].findall('S'):
             for word in sent.findall('W'):
                 link, pos, feats, head_token, head_pos, head_feats, head_root = get_info(word, sent)
-                if word.attrib.get('LEMMA', 'EMPTY') == 'не' and word.attrib.get('LINK', 'EMPTY') not in conjrels + ['подч-союзн', 'инф-союзн', 'сравн-союзн'] and word.attrib.get('DOM', 'EMPTY') != '_root':
+                if word.attrib.get('LEMMA', 'EMPTY').lower() == 'не' and word.attrib.get('LINK', 'EMPTY') not in conjrels + ['подч-союзн', 'инф-союзн', 'сравн-союзн'] and word.attrib.get('DOM', 'EMPTY') != '_root':
                     word.attrib['LINK'] = 'advmod'
                 try:
                     if link == 'предик': # посмотри на токен и на его вершину. Если хотя бы в одном найдется 'страд' -> nsubjpass, иначе -> nsubj
@@ -390,9 +390,9 @@ def main(ifname_list, ofname_list):
                     if head_token.attrib['DOM'] == '_root':
                         word.attrib['LINK'] = 'advcl'
                     else:
-                        if head_token.attrib['LEMMA'] == 'если':
+                        if head_token.attrib['LEMMA'].lower() == 'если':
                             for chi in children:
-                                if chi['LEMMA'] == 'то' and chi['LINK'] == 'соотнос':
+                                if chi['LEMMA'].lower() == 'то' and chi['LINK'] == 'соотнос':
                                     chi['DOM'] = head_token.attrib['DOM']
                                     chi['LINK'] = 'then-mark'                         
 
@@ -540,9 +540,9 @@ def main(ifname_list, ofname_list):
                                 elif head_token.attrib['LINK'] in {'nsubj','nsubj:pass'}:
                                     word.attrib['LINK'] = 'ccomp'
                                 else: # these are exceptions
-                                    if word.attrib['LEMMA'] in {'позорить', 'приезжать', 'грубый', 'показывать'}:
+                                    if word.attrib['LEMMA'].lower() in {'позорить', 'приезжать', 'грубый', 'показывать'}:
                                         word.attrib['LINK'] = 'сочин'
-                                    elif word.attrib['LEMMA'] == 'выражаться':
+                                    elif word.attrib['LEMMA'].lower() == 'выражаться':
                                         word.attrib['LINK'] = 'parataxis'
                                     else:
                                         word.attrib['LINK'] = 'mark'
@@ -639,7 +639,7 @@ def main(ifname_list, ofname_list):
                             else:
                                 word.attrib['LINK'] = 'acl'
                         elif sent.findall('W')[int(word.attrib['DOM']) - 1].attrib['FEAT'].split(' ')[0] in {'V'}: #this is an exception
-                            if head_token.attrib['LEMMA'] == 'тем' and word.attrib['LEMMA'] == 'более':
+                            if head_token.attrib['LEMMA'].lower() == 'тем' and word.attrib['LEMMA'].lower() == 'более':
                                 word.attrib['LINK'] = 'fixed'
                                 head_token.attrib['DOM'] = word.attrib['DOM']
                                 word.attrib['DOM'] = head_token.attrib['ID']
@@ -772,7 +772,7 @@ def main(ifname_list, ofname_list):
                         if elem['ID'] != word.attrib['ID'] and elem['LINK'] != 'вспом':
                             elem['DOM'] = word.attrib['ID']
                 elif link == 'сравн-союзн' and head_pos != 'CONJ':
-                    if head_token.attrib['LEMMA'] == 'как':
+                    if head_token.attrib['LEMMA'].lower() == 'как':
 
                         children = get_children_attrib(sent, head_token.attrib['ID'])
                         word.attrib['DOM'] = head_token.attrib['DOM']
@@ -798,7 +798,7 @@ def main(ifname_list, ofname_list):
                             if elem['ID'] != word.attrib['ID']:
                                 elem['DOM'] = word.attrib['ID']
 
-                    elif head_token.attrib['LEMMA'] == 'кроме':
+                    elif head_token.attrib['LEMMA'].lower() == 'кроме':
 
                         children = get_children_attrib(sent, head_token.attrib['ID'])
                         word.attrib['DOM'] = head_token.attrib['DOM']
@@ -811,7 +811,7 @@ def main(ifname_list, ofname_list):
                         elif sent.findall('W')[int(word.attrib['DOM']) - 1].attrib['FEAT'].split(' ')[0] in {'A', 'ADV'}:
                             word.attrib['LINK'] = 'obl'
 
-                    elif word.attrib['LEMMA'] == 'быть':
+                    elif word.attrib['LEMMA'].lower() == 'быть':
                         if sent.findall('W')[int(word.attrib['DOM']) - 1].attrib['FEAT'].split(' ')[0] in {'V'}:
                             word.attrib['LINK'] = 'advcl'
                         else:
@@ -821,9 +821,9 @@ def main(ifname_list, ofname_list):
                         head_token.attrib['DOM'] = word.attrib['ID']
                         word.attrib['LINK'] = 'advcl'
                         head_token.attrib['LINK'] = 'mark'
-                    elif word.attrib['LEMMA'] == 'миллион':
+                    elif word.attrib['LEMMA'].lower() == 'миллион':
                         word.attrib['LINK'] = 'nmod'
-                    elif word.attrib['LEMMA'] == 'ощупь':
+                    elif word.attrib['LEMMA'].lower() == 'ощупь':
                         word.attrib['LINK'] = 'nmod'
                         for item in sent.findall('W'):
                             if item.attrib['ID'] == '7':
@@ -872,7 +872,7 @@ def main(ifname_list, ofname_list):
                             if children[0]['LINK'] in {'advcl'}:
                                 children[0]['DOM'] = sent.findall('W')[int(head_token.attrib['DOM']) - 1].attrib['ID']
                                 word.attrib['DOM'] = children[0]['ID']
-                                if word.attrib['LEMMA'] not in conj_set:
+                                if word.attrib['LEMMA'].lower() not in conj_set:
                                     word.attrib['LINK'] = 'mark'
                                 else:
                                     word.attrib['LINK'] = 'cc'
@@ -880,12 +880,12 @@ def main(ifname_list, ofname_list):
                                 children[0]['DOM'] = word.attrib['DOM']
                                 children[0]['LINK'] = 'obl'
                                 word.attrib['DOM'] = children[0]['ID']
-                                if word.attrib['LEMMA'] not in conj_set:
+                                if word.attrib['LEMMA'].lower() not in conj_set:
                                     word.attrib['LINK'] = 'mark'
                                 else:
                                     word.attrib['LINK'] = 'cc'
                     else:
-                        if word.attrib['LEMMA'] == 'как':
+                        if word.attrib['LEMMA'].lower() == 'как':
                             word.attrib['DOM'] = '11'
                             word.attrib['LINK'] = 'mark'
                             for item in sent.findall('W'):
@@ -893,7 +893,7 @@ def main(ifname_list, ofname_list):
                                     item.attrib['DOM'] = '5'
                                 if item.attrib['DOM'] == '9':
                                     item.attrib['DOM'] = '11'
-                        elif word.attrib['LEMMA'] == 'чем' and head_token.attrib['LEMMA'] == 'более':
+                        elif word.attrib['LEMMA'].lower() == 'чем' and head_token.attrib['LEMMA'].lower() == 'более':
                             word.attrib['DOM'] = '13'
                             word.attrib['LINK'] = 'mark'
                             for item in sent.findall('W'):
@@ -985,7 +985,7 @@ def main(ifname_list, ofname_list):
                 if link == 'соотнос' and ('CONJ' in pos or 'PART' in pos) and 'CONJ' in head_pos:
 
                     word.attrib['DOM'] = sent.findall('W')[int(head_token.attrib['DOM']) - 1].attrib['DOM']
-                    if word.attrib['LEMMA'] not in conj_set:
+                    if word.attrib['LEMMA'].lower() not in conj_set:
                          word.attrib['LINK'] = 'mark'
                     else:
                          word.attrib['LINK'] = 'cc'
@@ -996,7 +996,7 @@ def main(ifname_list, ofname_list):
                         word.attrib['DOM'] = sent.findall('W')[int(head_token.attrib['DOM']) - 1].attrib['DOM']
                     else:
                         word.attrib['DOM'] = sent.findall('W')[int(head_token.attrib['DOM']) - 1].attrib['ID']
-                    if word.attrib['LEMMA'] not in conj_set:
+                    if word.attrib['LEMMA'].lower() not in conj_set:
                          word.attrib['LINK'] = 'mark'
                     else:
                          word.attrib['LINK'] = 'cc'
@@ -1028,9 +1028,9 @@ def main(ifname_list, ofname_list):
                             if elem.attrib['DOM'] == head_token.attrib['ID']:
                                 elem.attrib['DOM'] = word.attrib['ID']
 
-                    elif pos == 'PART' and word.attrib.get('LEMMA', 'EMPTY') == 'бы':
+                    elif pos == 'PART' and word.attrib.get('LEMMA', 'EMPTY').lower() == 'бы':
                         word.attrib['LINK'] = 'aux'
-                    elif pos == 'PART' and word.attrib.get('LEMMA', 'EMPTY') == 'было':
+                    elif pos == 'PART' and word.attrib.get('LEMMA', 'EMPTY').lower() == 'было':
                         word.attrib['LINK'] = 'advmod'
                     else:
                         word.attrib['DOM'] = head_token.attrib['DOM']
@@ -1071,7 +1071,7 @@ def main(ifname_list, ofname_list):
             for word in sent.findall('W'):
                 link, pos, feats, head_token, head_pos, head_feats, head_root = get_info(word, sent)
                 if link == 'присвяз':
-                    if head_token.attrib.get('LEMMA', 'EMPTY') == 'быть':
+                    if head_token.attrib.get('LEMMA', 'EMPTY').lower() == 'быть':
                         word.attrib['DOM'] = head_token.attrib['DOM']
                         head_token.attrib['DOM'] = word.attrib['ID']
                         if word.attrib['DOM'] == '_root':
@@ -1087,12 +1087,12 @@ def main(ifname_list, ofname_list):
         for sent in root[-1].findall('S'):
             for word in sent.findall('W'):
                 link, pos, feats, head_token, head_pos, head_feats, head_root = get_info(word, sent)
-                if link == 'пролепт' and head_token.attrib['LEMMA'] == 'вот':
-                    word.attrib['LINK'] = head_token.attrib['LINK']
+                if link == 'пролепт' and head_token.attrib['LEMMA'].lower() == 'вот':
+                    word.attrib['LINK'] = head_token.attrib.get('LINK', 'EMPTY')
                     word.attrib['DOM'] = head_token.attrib['DOM']
                     head_token.attrib['LINK'] = 'cop'
                     head_token.attrib['FEAT'] = 'PART'
-                if link == 'пролепт' and head_token.attrib['LEMMA'] == 'это':
+                if link == 'пролепт' and head_token.attrib['LEMMA'].lower() == 'это':
                     word.attrib['LINK'] = head_token.attrib['LINK']
                     word.attrib['DOM'] = head_token.attrib['DOM']
                     head_token.attrib['LINK'] = 'expl'
@@ -1109,22 +1109,22 @@ def main(ifname_list, ofname_list):
                     if head_token.attrib['FEAT'].split()[0] == 'S':
                         word.attrib['LINK'] = 'nmod'
                         for ch in children:
-                            if ch['LEMMA'] == 'или':
+                            if ch['LEMMA'].lower() == 'или':
                                 ch['LINK'] = 'fixed'
                     elif head_token.attrib['FEAT'].split()[0] == 'ADV':
                         word.attrib['LINK'] = 'discourse'
                         children[0]['LINK'] = 'discourse'
                     else:
-                        if head_token.attrib['LEMMA'] == 'почитать':
+                        if head_token.attrib['LEMMA'].lower() == 'почитать':
                             word.attrib['LINK'] = 'obj'
                             word.attrib['FEAT'] = 'PRON'
-                        elif head_token.attrib['LEMMA'] == 'спрашивать':
+                        elif head_token.attrib['LEMMA'].lower() == 'спрашивать':
                             word.attrib['LINK'] = 'mark'
                         else:
                             children[0]['DOM'] = word.attrib['DOM']
                             word.attrib['DOM'] = children[0]['ID']
                             children[0]['LINK'] = 'advcl'
-                            if word.attrib['LEMMA'] not in conj_set:
+                            if word.attrib['LEMMA'].lower() not in conj_set:
                                  word.attrib['LINK'] = 'mark'
                             else:
                                  word.attrib['LINK'] = 'cc'
@@ -1160,7 +1160,7 @@ def main(ifname_list, ofname_list):
                                 else:
                                     word.attrib['LINK'] = 'acl'
                             elif head_token.attrib['FEAT'].split()[0] in {'ADV'}:
-                                if word.attrib['LEMMA'] == 'человек':
+                                if word.attrib['LEMMA'].lower() == 'человек':
                                     word.attrib['DOM'] = head_token.attrib['DOM']
                                     word.attrib['LINK'] = 'acl'
                                 else:
@@ -1175,10 +1175,13 @@ def main(ifname_list, ofname_list):
                             if head_token.attrib['DOM'] == '_root':
                                 head_id = 1
                             if sent.findall('W')[int(head_id) - 1].attrib['FEAT'].split()[0] == 'S':
-                                word.attrib['DOM'] = sent.findall('W')[int(head_token.attrib['DOM']) - 1].attrib['ID']
+                                head_head_id = head_token.attrib['DOM']
+                                if head_head_id == '_root':
+                                    head_head_id = 1
+                                word.attrib['DOM'] = sent.findall('W')[int(head_head_id) - 1].attrib['ID']
                                 word.attrib['LINK'] = 'acl'
                             else:
-                                if word.attrib['LEMMA'] == 'идти':
+                                if word.attrib['LEMMA'].lower() == 'идти':
                                     for item in sent.findall('W'):
                                         if item.attrib['ID'] == '13':
                                             item.attrib['DOM'] = '10'
@@ -1190,11 +1193,11 @@ def main(ifname_list, ofname_list):
                         else:
                             word.attrib['LINK'] = 'acl' # Which is default for эксплет
                     if pos == 'CONJ':
-                        if head_token.attrib['LEMMA'] == 'потому':
+                        if head_token.attrib['LEMMA'].lower() == 'потому':
                             word.attrib['LINK'] = 'mark'
                             word.attrib['DOM'] = head_token.attrib['DOM']
                         else:
-                            if head_token.attrib['LEMMA'] == 'то':
+                            if head_token.attrib['LEMMA'].lower() == 'то':
                                 for item in sent.findall('W'):
                                     if item.attrib['ID'] == '24':
                                         item.attrib['DOM'] = '27'
@@ -1227,7 +1230,7 @@ def main(ifname_list, ofname_list):
             for word in sent.findall('W'):
                 link, pos, feats, head_token, head_pos, head_feats, head_root = get_info(word, sent)
                 if link == 'вспом':
-                    if word.attrib['LEMMA'] == 'себя':
+                    if word.attrib['LEMMA'].lower() == 'себя':
                             if 'ТВОР' in feats:
                                 word.attrib['LINK'] = 'fixed'
                             else:
@@ -1245,7 +1248,7 @@ def main(ifname_list, ofname_list):
                     elif head_token.text.istitle() and int(word.attrib['DOM']) < int(word.attrib['ID']):
                         word.attrib['LINK'] = 'flat:name'
                     else:
-                        if word.attrib['LEMMA'] == 'так' and head_token.attrib['LEMMA'] not in {'далее', 'называть', 'чтобы'}:
+                        if word.attrib['LEMMA'].lower() == 'так' and head_token.attrib['LEMMA'].lower() not in {'далее', 'называть', 'чтобы'}:
                             word.attrib['LINK'] = 'discourse'
                         else:
                             word.attrib['LINK'] = 'fixed'
@@ -1379,7 +1382,7 @@ def main(ifname_list, ofname_list):
                     word.attrib['LINK'] = utochn[(head_pos, pos)]
 
                 if link == 'кратн':
-                    if head_token.attrib['LEMMA'] == word.attrib['LEMMA']:
+                    if head_token.attrib['LEMMA'].lower() == word.attrib['LEMMA'].lower():
                         word.attrib['LINK'] = 'flat'
                     elif head_pos == 'V' and pos == 'V':
                         word.attrib['LINK'] = 'conj'
@@ -1392,7 +1395,7 @@ def main(ifname_list, ofname_list):
                     elif head_pos == 'CONJ' and pos == 'CONJ':
                         word.attrib['LINK'] = 'fixed'
                     elif head_pos == 'S' and pos == 'S':
-                        if head_token.attrib['LEMMA'] == 'хуан' and word.attrib['LEMMA'] == 'мануэль':
+                        if head_token.attrib['LEMMA'].lower() == 'хуан' and word.attrib['LEMMA'].lower() == 'мануэль':
                             word.attrib['LINK'] = 'flat:name'
                         else:
                             word.attrib['LINK'] = 'nmod'
@@ -1432,7 +1435,7 @@ def main(ifname_list, ofname_list):
 
 
                 if link == 'присвяз':
-                    if head_pos == 'S' and pos == 'S' and head_token.attrib['LEMMA'] == 'это':
+                    if head_pos == 'S' and pos == 'S' and head_token.attrib['LEMMA'].lower() == 'это':
                         children = get_children_attrib(sent, head_token.attrib['ID'])
                         word.attrib['DOM'] = head_token.attrib['DOM']
                         head_token.attrib['LINK'] = 'expl'
@@ -1598,7 +1601,7 @@ def main(ifname_list, ofname_list):
                             if head_pos in {'S', 'V', 'ADV'} and pos == 'A':
                                 word.attrib['LINK'] = 'obl'
                             elif head_pos == 'A' and pos == 'A':
-                                if head_token.attrib['LEMMA'] == 'должен':
+                                if head_token.attrib['LEMMA'].lower() == 'должен':
                                     word.attrib['LINK'] = 'xcomp'
                                 else:
                                     word.attrib['LINK'] = 'obl'
@@ -1651,7 +1654,7 @@ def main(ifname_list, ofname_list):
                     elif pos in {'INTJ', 'PR', 'NID', 'A', 'NUM'}:
                         word.attrib['LINK'] = 'obl'
                     elif pos == 'PART':
-                        if word.attrib['LEMMA'] in ['нет', 'эдь']:
+                        if word.attrib['LEMMA'].lower() in ['нет', 'эдь']:
                             word.attrib['LINK'] = 'obl'
                         else:
                             word.attrib['LINK'] = 'advmod'
